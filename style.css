@@ -308,7 +308,83 @@ body{ /*make this default if not set - used for projects */
 		display: none;
 	}
 
+
+
+
+
+
+/*----------------HOMEPAGE--------------------*/
+
+.heroboxes {
+    margin-top: 200px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    clear: both;
+}
+.herobox {
+    margin:0 20px 0 20px;
+    max-width: 300px;
+    border-top:2px solid #ffffff;
+}
+.herobox h1 {
+    font-weight:900;
+    font-style: italic;
+    font-family: "Open Sans";
+}
+.herobox p {
+    font-family: "Merriweather Regular";
+}
+
+.herobutton{
+    display: inline-block;
+    border:1px solid #FFFFFF;
+    color: #FFFFFF !important;
+    border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    font-family: "Open Sans";
+    font-weight:900;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    padding: 10px 30px;
+    text-shadow: 0 0 3px #9C9C9C;
+    background-color: unset;
+}
+.herobutton:hover, .herobutton:active{
+    border:1px solid #FFFFFF;
+    color: #ffffff;
+    box-shadow: inset 0 1px 0 0 #FFFFFF,inset 0 -1px 0 0 #FFFFFF,inset 0 0 0 1px #FFFFFF;
+    -moz-box-shadow: inset 0 1px 0 0 #FFFFFF,inset 0 -1px 0 0 #FFFFFF,inset 0 0 0 1px #FFFFFF;
+    -webkit-box-shadow: inset 0 1px 0 0 #FFFFFF,inset 0 -1px 0 0 #FFFFFF,inset 0 0 0 1px #FFFFFF;
+    background-color: unset;
+}
+
+#bgFeature {
+    font-family: "Open Sans";
+    text-decoration: underline;
+    color: #ffffff;
+    text-transform:capitalize;
+}
+
+#bgFeatureLocation {
+    font-family: "Merriweather BoldItalic";
+}
+
+.bgFeatureBox {
+    float:right;
+    padding:0 10px 0 0;
+    text-align:right;
+    clear:both;
+}
+
 /*-----------------FOOTER---------------------*/
+
+
+
+
 
 
 
