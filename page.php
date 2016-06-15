@@ -44,7 +44,6 @@ if ( is_home() || is_front_page() ) { ?>
             ?></span>
         <?php endforeach;
         wp_reset_postdata();?>
-        </>
     </div>
     <div class="heroboxes">
         <div class="herobox">
