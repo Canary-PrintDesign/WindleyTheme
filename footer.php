@@ -2,12 +2,10 @@
 <div class="push"></div>
 </div><!--end pusher-->
 
-<footer id="colophon" class="cf">
-	<div class="footer_wrapper">
-    <?php wp_nav_menu ( array( 'theme_location' => 'secondary-menu', 'menu_class' => 'pic_menu cf', ) ); ?>
+<footer class="page-footer">
+  <div class="container">
   </div>
 </footer>
-
 
 <?php wp_footer() ?>
 </body>
