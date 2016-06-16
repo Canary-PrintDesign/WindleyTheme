@@ -1,0 +1,15 @@
+{
+  "name": "windley-wp-theme",
+  "public": false,
+  "version": "1.0.0",
+  "description": "A custom Wordpress theme for Windley Construction",
+  "scripts": {
+    "build": "./bin/build.js",
+    "postinstall": "./bin/build.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^2.5.2"
+  }
+}
