@@ -5,6 +5,7 @@
 <title><?php bloginfo( 'name' ); ?></title>
 <!--css & favicon-->
 <link href="<?php echo get_stylesheet_directory_uri();?>/style.css" rel="stylesheet" type="text/css">
+<link href="<?php echo get_stylesheet_directory_uri();?>/build/css/main.css" rel="stylesheet" type="text/css">
 <link href="<?php echo get_stylesheet_directory_uri();?>/images/favicon.png" rel="icon" type="image/png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--jquery-->
