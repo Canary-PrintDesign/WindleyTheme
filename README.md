@@ -6,3 +6,11 @@ The Windley Contracting site theme files
 ```
 npm install
 ```
+
+## Developing
+
+Sorry, no watch yet, gonna need to rebuild to see sass changes
+
+```
+npm run build
+```

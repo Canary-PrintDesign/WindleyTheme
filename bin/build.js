@@ -3,9 +3,11 @@
 var fontAwesome = require("node-font-awesome"),
     fs = require("fs"),
     mkdirp = require("mkdirp"),
+    nodeNeat = require("node-neat"),
     ncp = require("ncp").ncp,
     path = require("path"),
-    rimraf = require("rimraf");
+    rimraf = require("rimraf"),
+    sass = require("node-sass");
 
 var config = {
   output: "/build",
@@ -40,4 +42,22 @@ ncp(config.fonts.input, safeDir(join(config.output, config.fonts.output)), funct
  if (err) {
    return console.error(err);
  }
+});
+
+/* SASS */
+sass.render({
+  file: join(config.sass.input),
+  includePaths: nodeNeat.with("node_modules", fontAwesome.scssPath)
+}, function (err, result) {
+  if (err) {
+    return console.error(err);
+  }
+
+  console.log("SASS compiled in", result.stats.duration, "ms");
+
+  fs.writeFile(safeDir(join(config.output, config.sass.output)), result.css, function(err) {
+    if (err) {
+      return console.error("Error writing file:", err);
+    }
+  });
 });
