@@ -309,11 +309,11 @@ body{ /*make this default if not set - used for projects */
 	}
 
 
-
-
-
-
 /*----------------HOMEPAGE--------------------*/
+
+#splashText {
+    font-family: "Open Sans";
+}
 
 .heroboxes {
     margin-top: 200px;
@@ -329,12 +329,14 @@ body{ /*make this default if not set - used for projects */
     border-top:2px solid #ffffff;
 }
 .herobox h1 {
-    font-weight:900;
     font-style: italic;
     font-family: "Open Sans";
+    font-weight:900;
 }
 .herobox p {
-    font-family: "Merriweather Regular";
+    font-family: "Merriweather";
+    font-size: 16px;
+    line-height:1.45em;
 }
 
 .herobutton{
@@ -345,7 +347,8 @@ body{ /*make this default if not set - used for projects */
     -webkit-border-radius: 3px 3px 3px 3px;
     -moz-border-radius: 3px 3px 3px 3px;
     font-family: "Open Sans";
-    font-weight:900;
+    letter-spacing: 1px;
+    font-weight:600;
     width: auto;
     height: auto;
     font-size: 16px;
@@ -353,6 +356,7 @@ body{ /*make this default if not set - used for projects */
     text-shadow: 0 0 3px #9C9C9C;
     background-color: unset;
 }
+
 .herobutton:hover, .herobutton:active{
     border:1px solid #FFFFFF;
     color: #ffffff;
@@ -364,13 +368,17 @@ body{ /*make this default if not set - used for projects */
 
 #bgFeature {
     font-family: "Open Sans";
+    font-size:.75em;
     text-decoration: underline;
+    text-transform:capitalize !important;
     color: #ffffff;
-    text-transform:capitalize;
+
 }
 
 #bgFeatureLocation {
-    font-family: "Merriweather BoldItalic";
+    font-family: "Merriweather", serif;
+    font-size:.75em;
+    color: #ffffff;
 }
 
 .bgFeatureBox {
@@ -378,13 +386,9 @@ body{ /*make this default if not set - used for projects */
     padding:0 10px 0 0;
     text-align:right;
     clear:both;
-}
+
 
 /*-----------------FOOTER---------------------*/
-
-
-
-
 
 
 
