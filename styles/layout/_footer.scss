@@ -36,6 +36,13 @@
     }
   }
 
+  .menu li {
+    display: block;
+  }
+
+  .site-map-group {
+    @include span-columns(2 of 4);
+  }
   .address-list {
     list-style: none;
 

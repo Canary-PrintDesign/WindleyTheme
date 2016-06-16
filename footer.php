@@ -17,6 +17,17 @@
         <li><a href="mailto:info@windleycontracting.com"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> info@windleycontracting.com</a></li>
       </ul>
     </div>
+
+    <div class="site-map">
+      <div class="site-map-group">
+        <h4><?php menu_name('footer-menu-1') ?></h4>
+        <?php wp_nav_menu( array('theme_location' => 'footer-menu-1') ); ?>
+      </div>
+      <div class="site-map-group">
+        <h4><?php menu_name('footer-menu-2') ?></h4>
+        <?php wp_nav_menu( array('theme_location' => 'footer-menu-2') ); ?>
+      </div>
+    </div>
   </div>
 </footer>
 
