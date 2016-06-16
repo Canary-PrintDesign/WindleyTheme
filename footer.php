@@ -28,6 +28,18 @@
         <?php wp_nav_menu( array('theme_location' => 'footer-menu-2') ); ?>
       </div>
     </div>
+
+    <div class="social-links">
+      <div class="social-highlight">
+        <h4>Follow us</h4>
+        <a href="https://www.instagram.com/windleycontracting/"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/WindleyHQ"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/windleycontracting"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+      </div>
+      <div class="credits">
+        Proudly presented by <a href="https://www.canaryprint.ca/">Canary Print+Design</a>
+      </div>
+    </div>
   </div>
 </footer>
 

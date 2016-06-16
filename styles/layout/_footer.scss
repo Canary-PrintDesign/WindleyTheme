@@ -8,6 +8,10 @@
   font-size: 12px;
   line-height: 1.6;
 
+  .container {
+    position: relative;
+  }
+
   a {
     color: $footer-link-color !important;
     border-bottom: 1px solid transparent !important;
@@ -49,5 +53,25 @@
     i {
       margin-left: 0;
     }
+  }
+
+  .social-highlight {
+    float: right;
+    background: $white;
+    margin-top: -$footer-padding;
+    padding: $footer-padding $footer-padding ($footer-padding / 3);
+    text-align: right;
+
+    h4 {
+      border-bottom: none;
+      margin-right: 0.5em;
+    }
+  }
+
+  .credits {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: $dusty-gray;
   }
 }
