@@ -4,18 +4,12 @@
   "version": "1.0.0",
   "description": "A custom Wordpress theme for Windley Construction",
   "scripts": {
-    "build": "./bin/build.js",
-    "postinstall": "./bin/build.js"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "bourbon": "^4.2.7",
-    "mkdirp": "^0.5.1",
-    "ncp": "^2.0.0",
     "node-font-awesome": "^1.0.2",
-    "node-neat": "^1.7.2",
-    "node-sass": "^3.7.0",
-    "rimraf": "^2.5.2"
+    "node-neat": "^1.7.2"
   }
 }
