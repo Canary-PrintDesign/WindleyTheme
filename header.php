@@ -28,12 +28,27 @@ $('#wprmenu_bar').click(function() {
 </head>
 <body <?php body_class(); ?>>
 <div class="pusher">
-<div id="header_wrapper" class="cf">
-	<header id="masthead" class="wrapper cf">
-		<a href="<?php echo home_url(); ?>" title="Windley Contracting - Home" class="home_link"><img src="<?php echo get_template_directory_uri(); ?>/images/windley-logo.png" alt="Windley Contracting logo" class="logo"></a>
-	<nav id="mainmenu">
-	<?php wp_nav_menu ( array( 'theme_location' => 'primary-menu' ) ); ?>
-	</nav>
-	</header>
-</div><!--end header_wrapper-->
-    <div id="pageup"></div>
+	<div id="header_wrapper" class="cf">
+		<header id="masthead" class="wrapper cf">
+			<nav>
+				<ul>
+					<li><?php wp_nav_menu( array( 'theme_location' => 'menu-left' ) ); ?>
+					</li>
+					<li>  <?php if ( get_theme_mod( 'nav-logo' ) ) : ?>
+							<div class='site-logo'>
+								<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'nav-logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+							</div>
+						<?php else : ?>
+							<hgroup>
+								<h1>Not working</h1>
+							</hgroup>
+						<?php endif; ?>
+					</li>
+					<li><?php wp_nav_menu( array( 'theme_location' => 'menu-right' ) ); ?>
+					</li>
+			</nav>
+
+
+		</header>
+	</div><!--end header_wrapper-->
+	<div id="pageup"></div>

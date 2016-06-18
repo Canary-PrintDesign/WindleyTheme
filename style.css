@@ -44,7 +44,7 @@ input,textarea, .gform_wrapper textarea, .gform_wrapper input[type=text], .gform
 }
 
 input:hover,textarea:hover,input:active,textarea:active,input:focus,textarea:focus{
-    
+
 }
 
 .gform_footer input[type=submit]{
@@ -58,7 +58,7 @@ input:hover,textarea:hover,input:active,textarea:active,input:focus,textarea:foc
 }
 
 input[type="submit"]{
-    cursor:pointer; 
+    cursor:pointer;
 }
 
 .gform_footer input[type="submit"]:hover,.gform_footer input[type="submit"]:active,.gform_footer input[type="submit"]:focus{
@@ -68,7 +68,7 @@ input[type="submit"]{
 }
 
 textarea{
-    
+
 }
 
 h1,h2,h3,h4,h5,h6, h1>a,h2>a,h3>a,h4>a,h5>a,h6>a{
@@ -87,7 +87,7 @@ h2{
 }
 
 h1>a:link, h2>a:link, h3>a:link, h4>a:link, h5>a:link, h6>a:link, h1>a:visited, h2>a:visited, h3>a:visited, h4>a:visited, h5>a:visited, h6>a:visited{
-    color:#fff; 
+    color:#fff;
     text-decoration:none;
 }
 
@@ -108,11 +108,11 @@ a:hover, a:active, a:focus{
 }
 
 figure{
-    
+
 }
 
 figcaption{
-    
+
 }
 
 blockquote{
@@ -120,7 +120,7 @@ blockquote{
     line-height: 1.6em;
     padding: 5px 20px;
     border: 1px solid #a6926a;
-    text-shadow: #000 0 0 3px; 
+    text-shadow: #000 0 0 3px;
 }
 
 
@@ -175,16 +175,16 @@ body{ /*make this default if not set - used for projects */
     background-position:center;
 }
 
-.page-id-847 .two_third ul{ 
+.page-id-847 .two_third ul{
     margin-bottom:20px;
 }
 
-.page-id-847 .two_third ul li, .page-id-12 .two_third ul li{ 
+.page-id-847 .two_third ul li, .page-id-12 .two_third ul li{
     margin-bottom:7px;
 }
 
-   
-    
+
+
 
 /*----------------HEADER-------------------*/
 
@@ -193,7 +193,8 @@ body{ /*make this default if not set - used for projects */
     position:fixed;
     left:0;
     top:0;
-    background:rgba(13, 46, 74, 0.9);
+    /*background:rgba(13, 46, 74, 0.9);*/
+    background: rgba(241, 241, 241, 1);
     min-width:300px;
     z-index:9999;
 }
@@ -208,15 +209,20 @@ body{ /*make this default if not set - used for projects */
     height:100%;
     max-width:310px;
 }
- 
+
 
 /*-----------------TOP NAV---------------------*/
 #masthead ul{
 	list-style:none;
-    font-size:35px;
-    font-variant:small-caps;
-    float:right;
-    padding-top:62px;
+    font-size:1em;
+    text-transform: uppercase;
+    font-weight:900;
+    font-family: "Open Sans";
+    float:left;
+    padding-top:42px;
+    height:55px;
+    background-color: transparent;
+    padding-left:-150px;
 }
 
 #masthead ul ul{
@@ -227,21 +233,24 @@ body{ /*make this default if not set - used for projects */
     margin:0 0;
 }
 
-
+.menu-item {
+    padding: 0 20px 0 20px;
+}
 
 #masthead li{
 	float:left;
-	margin:0 10px;
+	margin:0 10px 0 10px;
 }
 
 #masthead ul a:link, #masthead ul a:visited{
-    color:#f3ecdc;
+    color:#a6926a;
 }
 
-#masthead ul a:hover, #masthead ul a:active, #masthead ul a:focus{
-    color:#a6926a;
+#masthead ul a:active, #masthead ul a:focus, #masthead ul a:hover{
+    color:#FFFFFF;
     text-decoration:none;
 }
+
 
 /* Navigation Menu */
 	.menu ul {
@@ -301,8 +310,8 @@ body{ /*make this default if not set - used for projects */
 	.menu .current-menu-ancestor > a,
 	.menu .current_page_item > a,
 	.menu .current_page_ancestor > a {
-		color: #a6926a!important;
-		font-weight: normal;
+		color: #8a7958 !important;
+		font-weight: bold;
 	}
 	.menu-toggle {
 		display: none;
@@ -311,8 +320,64 @@ body{ /*make this default if not set - used for projects */
 
 /*----------------HOMEPAGE--------------------*/
 
-#splashText {
+.splashText {
+    width:100%;
+    display: inline-block;
+    text-align: center;
+    background-color: ;
+}
+
+.splashText>h1 {
     font-family: "Open Sans";
+    font-weight:900;
+    font-size:2.5em;
+    color: #e3be73;
+    font-variant: normal;
+
+}
+
+.splashText>h2 {
+    font-family: "Merriweather";
+    font-size:1.5em;
+    font-variant: normal;
+    color:#ffffff;
+}
+
+.ctaButtonWrapper {
+    width: 100%;height:40px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.ctaButton {
+    padding: 10px 40px;
+    margin: 40px 10px 10px 10px;
+    float: left;
+    border-radius: 3px 3px 5px 5px;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-weight:900;
+    font-size: 1.25em;
+    color: #ffffff !important;
+    text-decoration: none;
+    background-color: #b3a369;
+    border-bottom: 4px solid #7e6e38;
+    text-shadow: 0px 0px 5px #7f6f39;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+
+.ctaButton:hover,
+.ctaButton:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
+.ctaButton:active {
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid #5e532b;
 }
 
 .heroboxes {
@@ -324,8 +389,8 @@ body{ /*make this default if not set - used for projects */
     clear: both;
 }
 .herobox {
-    margin:0 20px 0 20px;
-    max-width: 300px;
+    margin:0 15px 0 15px;
+    max-width: 333px;
     border-top:2px solid #ffffff;
 }
 .herobox h1 {
@@ -382,12 +447,12 @@ body{ /*make this default if not set - used for projects */
 }
 
 .bgFeatureBox {
-    float:right;
-    padding:0 10px 0 0;
-    text-align:right;
-    clear:both;
+    float: right;
+    padding: 0 10px 0 0;
+    text-align: right;
+    clear: both;
 
-
+}
 /*-----------------FOOTER---------------------*/
 
 
@@ -397,7 +462,7 @@ body{ /*make this default if not set - used for projects */
     /*position:fixed;
     left:0;
     bottom:0;*/
-    background:rgba(0,0,0,0.75);
+    background:rgba(0,0,0,0.75) !important;
     padding:10px 0 2px;
     min-width:300px;
 }
@@ -414,11 +479,11 @@ body{ /*make this default if not set - used for projects */
 }
 
 #colophon .pic_menu li, #colophon .text_menu li{
-    display:inline-block; 
+    display:inline-block;
 }
 
 #colophon .pic_menu li:first-child, #colophon .pic_menu li:nth-child(2),#colophon .text_menu li:first-child, #colophon .text_menu li:nth-child(2){
-    margin-right:2%;   
+    margin-right:2%;
 }
 
 #colophon .pic_menu li:first-child a{
@@ -517,21 +582,21 @@ body{ /*make this default if not set - used for projects */
 
 
 #page_push{
-    /*only exists on home page */  
+    /*only exists on home page */
 }
 
 #page,#blog,#category{
     /*padding:40px 3%;*/
-    padding-top:40px; 
+    padding-top:40px;
     padding-bottom:40px;
     width:82%;
-    margin:0px auto 40px;  
+    margin:0px auto 40px;
     background:rgba(0,0,0,0.7);
     min-width:300px;
 }
 
 #page ul,#blog ul,#category ul,#page ol,#blog ol,#category ol{
-    margin-left:20px;   
+    margin-left:20px;
 }
 
 #pageup{
@@ -539,7 +604,7 @@ body{ /*make this default if not set - used for projects */
 }
 
 div.hentry{
-    padding: 0 3%;   
+    padding: 0 3%;
 }
 
 #page h1{
@@ -557,7 +622,7 @@ div.hentry{
 }
 
 .post{
-    margin-bottom:30px;   
+    margin-bottom:30px;
     position:relative;
 }
 
@@ -571,15 +636,15 @@ div.hentry{
 }
 
 .attachment-265x155xthumb_f:hover,.attachment-265x155xthumb_f:focus,.attachment-265x155xthumb_f:active{/*featured images of 265 x 155*/
-    border:#a6926a 8px solid;    
+    border:#a6926a 8px solid;
 }
 
 .read_more{
-    margin:0; 
+    margin:0;
 }
 
 .excerpt p{
-    margin:10px 0;   
+    margin:10px 0;
 }
 
 #construction_inner{
@@ -592,7 +657,7 @@ div.hentry{
 }
 
 #construction_inner img{
-    
+
 }
 
 .one_fourth .ngg-navigation, .projct_info .ngg-navigation{
@@ -611,7 +676,7 @@ div.hentry{
     min-height:185px;
 }
 .cat_thumb_container{
-    float:left;   
+    float:left;
 }
 
 
@@ -622,7 +687,7 @@ div.hentry{
 
 .prev{
    float:left;
-    margin-left:4%; 
+    margin-left:4%;
 }
 
 .archive_nav a{
@@ -693,14 +758,14 @@ div.hentry{
 
 /*------------------SOLILOQUY-----------------*/
 .soliloquy-container ul{
-   margin-left:0!important; 
+   margin-left:0!important;
 }
 
 .soliloquy-container img{
    width:auto;
     height:auto;
     max-width:auto
-    max-height:auto; 
+    max-height:auto;
 }
 
 
@@ -711,7 +776,7 @@ div.hentry{
 }
 /*---------------CLEARFIX------------------------*/
 .cf:before, .cf:after {
-    content: " "; 
+    content: " ";
     display: table;
 }
 
@@ -762,15 +827,15 @@ div.hentry{
         width:80%;
         font-size:30px;
     }
-    
+
     /*---------FOOTER--------*/
     #colophon .pic_menu a, #colophon .text_menu a{
-        
-        font-size:20px; 
+
+        font-size:20px;
         width:225px;
     }
     #colophon .pic_menu li:first-child, #colophon .pic_menu li:nth-child(2), #colophon .text_menu li:first-child, #colophon .ptext_menu li:nth-child(2){
-        margin-right:1%;   
+        margin-right:1%;
     }
 
 }
@@ -782,7 +847,7 @@ div.hentry{
         min-height:auto;
     }
     .cat_thumb_container{
-        float:none;   
+        float:none;
     }
 }
 
@@ -798,7 +863,7 @@ div.hentry{
 }
 
 @media only screen and (max-width:770px){
-    
+
     #page, #blog, #category {
         margin: 0px auto 40px;
     }
@@ -828,14 +893,14 @@ div.hentry{
         display:none;
     }
 
-    
+
     /*---------CONTENT--------*/
     #page h1{
         width:90%;
         font-size:24px;
     }
     #category h1{
-        clear:both; 
+        clear:both;
         font-size: 28px;
         line-height: 2em;
     }
@@ -854,7 +919,7 @@ div.hentry{
         margin:auto;
         text-align:center;
     }
-    
+
     /*#colophon .pic_menu li{
         display:none;
         margin:auto;
@@ -867,16 +932,16 @@ div.hentry{
     }
 
     #colophon .pic_menu li a, #colophon .pic_menu li:first-child a, #colophon .pic_menu li:last-child a, #colophon .pic_menu  li:nth-child(2) a{
-         background-image:none;   
+         background-image:none;
         height:30px;
         margin:auto!important;
     }
 
     /*#colophon .text_menu li:first-child, #colophon .text_menu li:nth-child(2){
-        margin-right:auto!important; 
+        margin-right:auto!important;
         margin:15px auto;
     }
-   
+
     #colophon .text_menu li:first-child a, #colophon .text_menu li:last-child a, #colophon .text_menu  li:nth-child(2) a{
         height:auto;
         margin-bottom:10px;
@@ -890,13 +955,13 @@ div.hentry{
     }*/
 
     #colophon{
-        padding-top:0;   
+        padding-top:0;
     }
 
     .pusher {
         margin: 0 auto -103px; /* the bottom margin is the negative value of the footer's height */
     }
-    
+
     #colophon, .push{
         height:103px;
     }

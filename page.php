@@ -24,8 +24,6 @@
 <?php
 if ( is_home() || is_front_page() ) { ?>
     <div id='page_push'>
-        <h1>we build great stuff</h1>
-        <h2>let us build for you or something</h2>
 
         <div class="bgFeatureBox">
             <?php
@@ -45,6 +43,15 @@ if ( is_home() || is_front_page() ) { ?>
             endforeach;
             wp_reset_postdata();?>
         </div>
+
+        <div class="splashText">
+            <h1>WE BUILD GREAT STUFF!</h1>
+            <h2>Let us build for you or something.</h2>
+        </div>
+        <div class="ctaButtonWrapper">
+            <a href="#" class="ctaButton">View Our Projects</a>
+        </div>
+
         <div class="heroboxes">
             <div class="herobox hb1">
                 <h1>about windley</h1>
@@ -63,7 +70,8 @@ if ( is_home() || is_front_page() ) { ?>
             </div>
         </div>
     </div>
-<?php } else { ?>
+<?php
+} else { ?>
 
 <div id="page" class="wrapper cf fixer_wrapper">
 
