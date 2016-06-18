@@ -10,8 +10,13 @@ The Windley Contracting site theme files
 
 ## Developing
 
-Sorry, no watch yet, gonna need to rebuild to see sass changes
-
 ```
 grunt
 ```
+
+### Livereload
+
+To enable livereload install a [browser extension][1]
+
+
+[1]: http://livereload.com/extensions/ "Livereload browser extensions"

@@ -32,7 +32,23 @@ module.exports = function(grunt) {
         }]
       }
     },
+
+    watch: {
+      options: {
+        livereload: true,
+      },
+
+      css: {
+        files: 'styles/**/*.scss',
+        tasks: ['sass'],
+      },
+
+      php: {
+        files: '**/*.php',
+      },
+    },
   });
 
-  grunt.registerTask('default', ['copy', 'sass']);
+  grunt.registerTask('build', ['copy', 'sass']);
+  grunt.registerTask('default', ['build', 'watch']);
 };
