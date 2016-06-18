@@ -1,4 +1,12 @@
 <?php
+    add_theme_support( 'custom-logo', array(
+        'height'      => 120,
+        'width'       => 318,
+        'flex-height' => true,
+        'flex-width'  => true,
+        'header-text' => array( 'site-title', 'site-description' ),
+    ) );
+
     register_nav_menus(
         array(
         'primary-menu' => 'Primary Menu',
