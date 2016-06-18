@@ -5,6 +5,19 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    copy: {
+      dist: {
+        files: [
+          {
+            src: '*.*',
+            dest: 'build/fonts/',
+            cwd: require("node-font-awesome").fonts.replace(/\*$/, ""),
+            expand: true
+          }
+        ],
+      },
+    },
+
     sass: {
       dist: {
         options: {
