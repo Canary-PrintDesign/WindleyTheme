@@ -1,12 +1,34 @@
 <?php
-    register_nav_menus(
-        array(
+register_nav_menus(
+    array(
         'primary-menu' => 'Primary Menu',
         'secondary-menu' => 'Secondary Menu',
-        'footer-menu-1' => 'Footer Menu 1',
-        'footer-menu-2' => 'Footer Menu 2'
+        'menu-left' => 'Main Menu - Left Side',
+        'menu-right' => 'Main Menu - Right Side'
+    )
+);
+
+function navlogo_customize_register( $wp_customize )
+{
+    $wp_customize->add_section( 'nav-logo' , array(
+        'title'    => __( 'Main Navigation Logo', 'navlogo' ),
+        'priority' => 30
+    ) );
+    $wp_customize->add_setting( 'nav-logo' );
+
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'img-upload',
+            array(
+                'label' => 'Logo for Main Navigation',
+                'section' => 'nav-logo',
+                'settings' => 'nav-logo'
+            )
         )
     );
+}
+add_action( 'customize_register', 'navlogo_customize_register');
 
     register_sidebar( array(
         'name'          => __( 'Footer Column 1' ),
