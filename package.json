@@ -4,11 +4,16 @@
   "version": "1.0.0",
   "description": "A custom Wordpress theme for Windley Construction",
   "scripts": {
+    "postinstall": "node node_modules/grunt-cli/bin/grunt"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "bourbon": "^4.2.7",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "load-grunt-tasks": "^3.5.0",
     "node-font-awesome": "^1.0.2",
     "node-neat": "^1.7.2"
   }
