@@ -1,19 +1,21 @@
 $concrete:            #F2F2F2;
+$mercury:             #E6E6E6;
 $teak:                #B5A36A;
 $tundora:             #4c4c4c;
 $white:               #FFFFFF;
 $dusty-gray:          #999999;
 
 $body-color:          $tundora;
-$body-bg:             $concrete;
+$body-bg:             $white;
 $body-padding-mobile: 0.5rem;
 
-$link-color:          $teak;
+$link-color:          $tundora;
+$hover:               $white;
 
 $font-body:           'Merriweather';
 $font-heading:        'Open Sans';
 
 $footer-padding:      1.5rem;
 $footer-color:        $body-color;
-$footer-bg:           $body-bg;
+$footer-bg:           $teak;
 $footer-link-color:   $link-color;

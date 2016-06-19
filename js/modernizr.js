@@ -45,7 +45,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     slice = classes.slice,
 
-    featureName, 
+    featureName,
 
 
     injectElementWithStyles = function( rule, callback, nodes, testnames ) {
@@ -105,7 +105,7 @@ window.Modernizr = (function( window, document, undefined ) {
       return bool;
 
      },
- 
+
 
     isEventSupported = (function() {
 
@@ -152,7 +152,7 @@ window.Modernizr = (function( window, document, undefined ) {
       };
     }
     else {
-      hasOwnProp = function (object, property) { 
+      hasOwnProp = function (object, property) {
         return ((property in object) && is(object.constructor.prototype[property], 'undefined'));
       };
     }
@@ -620,7 +620,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
        }
 
-       return Modernizr; 
+       return Modernizr;
      };
 
 
@@ -870,13 +870,13 @@ Modernizr.testStyles( '#modernizr{background-size:cover}', function( elem ) {
 	var style = window.getComputedStyle ?
 		window.getComputedStyle( elem, null )
 		: elem.currentStyle;
-		
+
 	Modernizr.addTest( 'bgsizecover', style.backgroundSize == 'cover' );
 });/*
 	Allan Lei https://github.com/allanlei
-	
+
 	Check adapted from https://github.com/brandonaaron/jquery-cssHooks/blob/master/bgpos.js
-	
+
 	Test: http://jsfiddle.net/allanlei/R8AYS/
 */
 Modernizr.addTest('bgpositionxy', function() {
@@ -889,7 +889,7 @@ Modernizr.addTest('bgpositionxy', function() {
 });// developer.mozilla.org/en/CSS/background-repeat
 
 // test page: jsbin.com/uzesun/
-// http://jsfiddle.net/ryanseddon/yMLTQ/6/    
+// http://jsfiddle.net/ryanseddon/yMLTQ/6/
 
 (function(){
 
@@ -899,9 +899,9 @@ function getBgRepeatValue(elem){
              getComputedStyle(elem, null).getPropertyValue('background') :
              elem.currentStyle['background']);
 }
-  
 
-Modernizr.testStyles(' #modernizr { background-repeat: round; } ', function(elem, rule){ 
+
+Modernizr.testStyles(' #modernizr { background-repeat: round; } ', function(elem, rule){
 
   Modernizr.addTest('bgrepeatround', getBgRepeatValue(elem) == 'round');
 
@@ -909,7 +909,7 @@ Modernizr.testStyles(' #modernizr { background-repeat: round; } ', function(elem
 
 
 
-Modernizr.testStyles(' #modernizr { background-repeat: space; } ', function(elem, rule){ 
+Modernizr.testStyles(' #modernizr { background-repeat: space; } ', function(elem, rule){
 
   Modernizr.addTest('bgrepeatspace', getBgRepeatValue(elem) == 'space');
 
@@ -948,7 +948,7 @@ Modernizr.addTest('lastchild', function(){
 
 Modernizr.addTest('placeholder', function(){
 
-  return !!( 'placeholder' in ( Modernizr.input    || document.createElement('input')    ) && 
+  return !!( 'placeholder' in ( Modernizr.input    || document.createElement('input')    ) &&
              'placeholder' in ( Modernizr.textarea || document.createElement('textarea') )
            );
 
@@ -963,7 +963,7 @@ Modernizr.addTest('cssresize', Modernizr.testAllProps('resize'));
 
 // This implementation only tests support for interactive form validation.
 // To check validation for a specific type or a specific other constraint,
-// the test can be combined: 
+// the test can be combined:
 //    - Modernizr.inputtypes.numer && Modernizr.formvalidation (browser supports rangeOverflow, typeMismatch etc. for type=number)
 //    - Modernizr.input.required && Modernizr.formvalidation (browser supports valueMissing)
 //
@@ -999,13 +999,13 @@ Modernizr.addTest('formvalidation', function(){
         e.stopPropagation();
     };
 
-    // Calling form.submit() doesn't trigger interactive validation, 
+    // Calling form.submit() doesn't trigger interactive validation,
     // use a submit button instead
     //older opera browsers need a name attribute
     form.innerHTML = '<input name="modTest" required><button></button>';
 
     // FF4 doesn't trigger "invalid" event if form is not in the DOM tree
-    // Chrome throws error if invalid input is not visible when submitting 
+    // Chrome throws error if invalid input is not visible when submitting
     form.style.position = 'absolute';
     form.style.top = '-99999em';
 
@@ -1020,7 +1020,7 @@ Modernizr.addTest('formvalidation', function(){
 
     body.appendChild(form);
 
-    input = form.getElementsByTagName('input')[0];	
+    input = form.getElementsByTagName('input')[0];
 
     // Record whether "invalid" event is fired
     input.oninvalid = function(e) {
