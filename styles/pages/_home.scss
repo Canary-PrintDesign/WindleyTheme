@@ -1,5 +1,11 @@
 .home {
 
+  .background-image {
+    @include position(fixed, 0);
+    background-size: cover;
+    z-index: -1;
+  }
+
   #bgFeature {
     font-family: $font-heading;
     font-size:.75em;
