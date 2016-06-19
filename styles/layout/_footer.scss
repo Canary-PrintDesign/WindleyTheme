@@ -17,8 +17,9 @@
     border-bottom: 1px solid transparent !important;
 
     &:hover {
-      border-bottom-color: $footer-link-color !important;
+      border-bottom-color: $hover !important;
       text-decoration: none;
+      color: $hover !important;
     }
   }
 
@@ -118,6 +119,5 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    color: $dusty-gray;
   }
 }
