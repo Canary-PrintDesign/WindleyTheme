@@ -1,5 +1,6 @@
 .page-footer {
   padding: $footer-padding 0;
+  margin-top: $footer-top-margin;
   background: $footer-bg;
   color: $footer-color;
   box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1), 0 -5px 5px rgba(0, 0, 0, 0.15);
@@ -27,10 +28,11 @@
     display: inline-block;
     padding-bottom: 2px;
     margin-bottom: 0.5rem;
-    border-bottom: 1px solid $footer-color;
+    border-bottom: 2px solid $footer-color;
     font-family: $font-heading;
     font-weight: 800;
-    font-size: 14px;
+    font-size: 13px;
+    text-transform: uppercase;
   }
 
   i {
@@ -43,6 +45,9 @@
 
   .menu li {
     display: block;
+    a {
+      border-bottom: 1px solid !important;
+    }
   }
 
   .site-map-group {
@@ -94,6 +99,10 @@
     }
   }
 
+  .menu-item {
+    padding: 0;
+  }
+
   .address-list {
     list-style: none;
 
@@ -109,15 +118,30 @@
     padding: $footer-padding $footer-padding ($footer-padding / 3);
     text-align: right;
 
+    .social-icons {
+      color: $footer-bg;
+    }
+
     h4 {
       border-bottom: none;
       margin-right: 0.5em;
     }
   }
 
+  .footer-bottom {
+    position: relative;
+    margin-top: $footer-padding * 3;
+    font-size: 11px;
+  }
+
   .credits {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    float: right;
+    a {
+      border-bottom: 1px solid !important;
+    }
+  }
+
+  .copyright {
+    float: left;
   }
 }
