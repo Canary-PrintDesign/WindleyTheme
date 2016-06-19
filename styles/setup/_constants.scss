@@ -4,6 +4,8 @@ $teak:                #B5A36A;
 $tundora:             #4c4c4c;
 $white:               #FFFFFF;
 $dusty-gray:          #999999;
+$pesto:               #7E6E38; /* Lowlight color for $teak */
+$laser:               #CFB97A; /* Highlight color for $teak */
 
 $body-color:          $tundora;
 $body-bg:             $white;
@@ -20,3 +22,9 @@ $footer-top-margin:   6rem;
 $footer-color:        $body-color;
 $footer-bg:           $teak;
 $footer-link-color:   $link-color;
+
+$brand-primary:       $teak;
+$brand-primary-high:  $laser;
+$brand-primary-low:   $pesto;
+$brand-secondary:     $tundora;
+
