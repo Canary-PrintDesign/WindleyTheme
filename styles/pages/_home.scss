@@ -1,5 +1,16 @@
 .home {
 
+  .background-image {
+    @include position(fixed, 0);
+    background-size: cover;
+    transition: all 500ms; // filter is prefixed, let's just transtition all
+    z-index: -1;
+  }
+
+  &:not(.at-scroll-top) .background-image {
+    @include filter(blur(5px));
+  }
+
   #bgFeature {
     font-family: $font-heading;
     font-size:.75em;
@@ -134,5 +145,4 @@
     border: none;
     text-decoration: none;
   }
-
 }

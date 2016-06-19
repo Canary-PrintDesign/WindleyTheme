@@ -1,23 +1,19 @@
 <?php get_header(); ?>
+<?php
+    $args = array( 'posts_per_page' => 1, 'orderby' => 'rand', 'tag' => 'frontpage' );
+    $myposts = get_posts( $args );
+    foreach ( $myposts as $post ) : setup_postdata( $post );
+    $src = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), 'full' )[0];
+?>
 
+<div class="background-image" style="background-image: url(<?php echo $src; ?>);"></div>
 <div class="container">
     <div class="bgFeatureBox">
-        <?php
-            $args = array( 'posts_per_page' => 1, 'orderby' => 'rand', 'tag' => 'frontpage' );
-            $myposts = get_posts( $args );
-            foreach ( $myposts as $post ) : setup_postdata( $post );
-        ?>
         <a id="bgFeature" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         <br>
-        <?php
-            $src = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), 'full' )[0];
-            echo("<style type='text/css'>body {background-image: url('".$src."') !important;}</style>"); ?>
-            <span id="bgFeatureLocation">
-                <?php echo(get_post_meta( get_the_ID(), 'project_location', true )); ?>
-            </span>
-        <?php
-        endforeach;
-        wp_reset_postdata();?>
+        <span id="bgFeatureLocation">
+            <?php echo(get_post_meta( get_the_ID(), 'project_location', true )); ?>
+        </span>
     </div>
     <div class="splashText">
         <h1>Performance & Strength</h1>
@@ -46,4 +42,9 @@
     </div>
 </div>
 
+<?php
+endforeach;
+wp_reset_postdata();?>
+
+<script src="<?php echo get_stylesheet_directory_uri();?>/build/js/pages/home.js"></script>
 <?php get_footer(); ?>
