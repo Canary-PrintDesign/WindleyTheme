@@ -9,8 +9,8 @@
 
     register_nav_menus(
         array(
-        'primary-menu' => 'Primary Menu',
-        'secondary-menu' => 'Secondary Menu',
+        'topnav-left'   => 'Main Menu - Left Side',
+        'topnav-right'  => 'Main Menu - Right Side',
         'footer-menu-1' => 'Footer Menu 1',
         'footer-menu-2' => 'Footer Menu 2'
         )
