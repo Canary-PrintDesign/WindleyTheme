@@ -33,3 +33,5 @@ $topnav-logo-width:               318px;
 $topnav-logo-overhang:            55px;
 $topnav-color:                    $body-color;
 $topnav-bg:                       $teak;
+$topnav-link-color:               $white;
+$topnav-link-color-active:        transparentize($white, 0.5);
