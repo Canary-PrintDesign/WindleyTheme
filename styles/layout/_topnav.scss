@@ -95,4 +95,42 @@
       }
     }
   }
+
+
+  .social-links {
+
+    .social-highlight {
+      float: right;
+      background: $white;
+      padding: 0px 3px 3px 3px;
+      text-align: center;
+
+      .social-icons, a {
+        color: $brand-primary;
+
+        &:hover {
+          color: $brand-primary-low;
+        }
+      }
+
+      .fa {
+        vertical-align: 0% !important;
+        display: inline !important;
+       }
+
+      a {
+        font-size: 13px;
+        margin: 0.5em;
+      }
+
+      h4 {
+        border-bottom: none;
+        display: inline-block;
+        font-family: $font-heading;
+
+
+        text-transform: uppercase;
+      }
+    }
+  }
 }
