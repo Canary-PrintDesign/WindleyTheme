@@ -2,7 +2,9 @@
   <div class="container">
     <div class="nav-wrapper">
       <?php wp_nav_menu ( array( 'theme_location' => 'topnav-left' ) ); ?>
-      <?php the_custom_logo(); ?>
+      <div class="logo-wrapper">
+        <?php the_custom_logo(); ?>
+      </div>
       <?php wp_nav_menu ( array( 'theme_location' => 'topnav-right' ) ); ?>
     </div>
   </div>

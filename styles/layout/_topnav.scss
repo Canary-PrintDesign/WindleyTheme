@@ -10,4 +10,14 @@
     position: absolute;
     bottom: 0;
   }
+
+  .logo-wrapper {
+    position: relative;
+    width: $topnav-logo-width;
+  }
+
+  .custom-logo-link {
+    position: absolute;
+    bottom: -$topnav-logo-overhang;
+  }
 }
