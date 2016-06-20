@@ -17,11 +17,11 @@
     </div>
 
     <div class="site-map">
-      <div class="site-map-group">
+      <div class="site-map-group footer-menu-right">
         <h4><?php menu_name('footer-menu-1') ?></h4>
         <?php wp_nav_menu( array('theme_location' => 'footer-menu-1') ); ?>
       </div>
-      <div class="site-map-group">
+      <div class="site-map-group footer-menu-left">
         <h4><?php menu_name('footer-menu-2') ?></h4>
         <?php wp_nav_menu( array('theme_location' => 'footer-menu-2') ); ?>
       </div>
