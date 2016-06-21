@@ -51,7 +51,7 @@
   }
 
   .site-map-group {
-    @include span-columns(2 of 4);
+    @include span(6);
   }
 
   @media (max-width: 450px) {
@@ -93,12 +93,11 @@
 
   @media (min-width: 700px) and (max-width: 999px) {
     .contact-info {
-      @include span-columns(4);
+      @include span(4);
     }
 
     .site-map {
-      @include span-columns(4);
-      @include omega();
+      @include span(4);
     }
 
     .footer-menu-right {
@@ -112,7 +111,7 @@
     .contact-info,
     .site-map,
     .social-links {
-      @include span-columns(4);
+      @include span(4);
     }
   }
 

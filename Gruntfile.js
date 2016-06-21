@@ -44,7 +44,10 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          loadPath: require("node-neat").with(require("node-font-awesome").scssPath)
+          loadPath: [
+            'node_modules/susy/sass',
+          ].concat(require("node-font-awesome").scssPath)
+           .concat( require("bourbon").includePaths)
         },
         files: [{
           expand: true,
