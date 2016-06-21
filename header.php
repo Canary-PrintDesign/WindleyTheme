@@ -13,17 +13,24 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <?php wp_head(); ?>
-<script>
-$(document).ready(function() {
-$('#wprmenu_bar').click(function() {
-    if ($('.menu_is_opened')[-1]){
-   // location.reload();
-	}else{
-	location.reload();
-	}
-}
-});
-});
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#wprmenu_bar').click(function() {
+			if ($('.menu_is_opened')[-1]){
+				// location.reload();
+			}else{
+				location.reload();
+			}
+		});
+	});
+	$(window).scroll(function() {
+		var header = $(document).scrollTop();
+		if (header > 1 ) { // Change this number to the amount you want to scroll before the header sticks
+			$('nav').addClass('sticky');
+		} else {
+			$('nav').removeClass('sticky');
+		}
+	});
 </script>
 </head>
 <body <?php body_class(); ?>>
