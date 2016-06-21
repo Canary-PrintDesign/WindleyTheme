@@ -14,13 +14,13 @@
   }
 
   a {
-    color: $footer-link-color !important;
-    border-bottom: 1px solid transparent !important;
+    color: $footer-link-color;
+    border-bottom: 1px solid transparent;
 
     &:hover {
-      border-bottom-color: $hover !important;
+      border-bottom-color: $hover;
       text-decoration: none;
-      color: $hover !important;
+      color: $hover;
     }
   }
 
@@ -46,7 +46,7 @@
   .menu li {
     display: block;
     a {
-      border-bottom: 1px solid !important;
+      border-bottom: 1px solid;
     }
   }
 
@@ -154,7 +154,7 @@
   .credits {
     float: right;
     a {
-      border-bottom: 1px solid !important;
+      border-bottom: 1px solid;
     }
   }
 
