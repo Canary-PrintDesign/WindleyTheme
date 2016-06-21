@@ -7,7 +7,7 @@
   font-family: $font-heading;
   font-weight: 600;
   font-size: 12px;
-  line-height: 1.6;
+  line-height: 2;
 
   .container {
     position: relative;
@@ -45,13 +45,51 @@
 
   .menu li {
     display: block;
-    a {
-      border-bottom: 1px solid;
+  }
+
+  .contact-info {
+    a:hover {
+      border-bottom-color: transparent;
+    }
+  }
+  .site-map-group {
+    @include span(6);
+  }
+
+  .social-highlight {
+    float: right;
+    background: $white;
+    margin-top: -$footer-padding;
+    padding: $footer-padding $footer-padding ($footer-padding / 3);
+    text-align: right;
+
+      a:hover {
+        border-bottom-color: transparent !important;
+      }
+
+    .social-icons {
+      color: $social-icons;
+    }
+
+    h4 {
+      border-bottom: none;
+      margin-right: 0.5em;
+      text-transform: none !important;
     }
   }
 
-  .site-map-group {
-    @include span(6);
+  .footer-bottom {
+    position: relative;
+    margin-top: $footer-padding * 3;
+    font-size: 11px;
+  }
+
+  .credits {
+    float: right;
+  }
+
+  .copyright {
+    float: left;
   }
 
   @media (max-width: 450px) {
@@ -71,9 +109,6 @@
     }
   }
 
-
-
-
   @media (max-width: 699px) {
     padding: $body-padding-mobile;
 
@@ -86,9 +121,6 @@
     .site-map-group {
       display: none;
     }
-
-
-
   }
 
   @media (min-width: 700px) and (max-width: 999px) {
@@ -103,8 +135,6 @@
     .footer-menu-right {
       display: none;
     }
-
-
   }
 
   @media (min-width: 1000px) {
@@ -121,43 +151,8 @@
 
   .address-list {
     list-style: none;
-
     i {
       margin-left: 0;
     }
-  }
-
-  .social-highlight {
-    float: right;
-    background: $white;
-    margin-top: -$footer-padding;
-    padding: $footer-padding $footer-padding ($footer-padding / 3);
-    text-align: right;
-
-    .social-icons {
-      color: $footer-bg;
-    }
-
-    h4 {
-      border-bottom: none;
-      margin-right: 0.5em;
-    }
-  }
-
-  .footer-bottom {
-    position: relative;
-    margin-top: $footer-padding * 3;
-    font-size: 11px;
-  }
-
-  .credits {
-    float: right;
-    a {
-      border-bottom: 1px solid;
-    }
-  }
-
-  .copyright {
-    float: left;
   }
 }

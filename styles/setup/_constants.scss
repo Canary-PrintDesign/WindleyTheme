@@ -1,28 +1,33 @@
+$athens-gray:         #E5E9ED;
 $concrete:            #F2F2F2;
-$mercury:             #E6E6E6;
-$teak:                #B5A36A;
-$tundora:             #4c4c4c;
-$white:               #FFFFFF;
 $dusty-gray:          #999999;
-$pesto:               #7E6E38; /* Lowlight color for $teak */
 $laser:               #CFB97A; /* Highlight color for $teak */
+$mercury:             #E6E6E6;
+$pesto:               #7E6E38; /* Lowlight color for $teak */
+$regal-blue:          #003C71;
+$teak:                #B5A36A;
+$tundora:             #404040;
+$white:               #FFFFFF;
+
 
 $body-color:          $tundora;
 $body-bg:             $white;
 $body-padding-mobile: 0.5rem;
 $container-width:     1170px;
 
-$link-color:          $tundora;
-$hover:               $white;
+$link-color:          $teak;
+$hover:               $tundora;
 
-$font-body:           'Merriweather';
 $font-heading:        'Open Sans';
+$font-body:           'Merriweather';
+
+$social-icons:        $teak;
 
 $footer-padding:      1rem;
 $footer-top-margin:   6rem;
 $footer-color:        $body-color;
-$footer-bg:           $teak;
-$footer-link-color:   $link-color;
+$footer-bg:           $athens-gray;
+$footer-link-color:   $regal-blue;
 
 $brand-primary:       $teak;
 $brand-primary-high:  $laser;
@@ -33,10 +38,10 @@ $topnav-height:                   86px;
 $topnav-logo-width:               318px;
 $topnav-logo-overhang:            55px;
 $topnav-color:                    $body-color;
-$topnav-bg:                       $teak;
-$topnav-link-color:               $white;
-$topnav-link-color-active:        transparentize($white, 0.5);
-$submenu-bg:                      $white;
+$topnav-bg:                       $athens-gray;
+$topnav-link-color:               $regal-blue;
+$topnav-link-color-active:        $tundora;
+$submenu-bg:                      $athens-gray;
 $submenu-border:                  $teak;
-$submenu-link-color:              $teak;
+$submenu-link-color:              $regal-blue;
 $submenu-link-color-active:       $tundora;
