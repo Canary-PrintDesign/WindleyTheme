@@ -8,19 +8,19 @@
 
 <div class="background-image" style="background-image: url(<?php echo $src; ?>);"></div>
 <div class="container">
-    <div class="bgFeatureBox">
-        <a id="bgFeature" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+    <div class="bgfeaturebox">
+        <a class="bgfeature" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         <br>
-        <span id="bgFeatureLocation">
+        <span class="bgfeaturelocation">
             <?php echo(get_post_meta( get_the_ID(), 'project_location', true )); ?>
         </span>
     </div>
-    <div class="splashText">
+    <div class="splashtext">
         <h1>Performance & Strength</h1>
         <h2>Since 1949</h2>
     </div>
-    <div class="ctaButtonWrapper">
-        <a href="#" class="ctaButton">View Our Projects</a>
+    <div class="ctabuttonwrapper">
+        <a href="#" class="ctabutton">View Our Projects</a>
     </div>
 
     <div class="heroboxes">

@@ -1,4 +1,5 @@
 .home {
+  background-color: $tundora;
 
   .background-image {
     @include position(fixed, 0);
@@ -9,62 +10,61 @@
 
   &:not(.at-scroll-top) .background-image {
     @include filter(blur(5px));
+    opacity: 0.5;
   }
 
-  #bgFeature {
-    font-family: $font-heading;
-    font-size:.75em;
-    font-weight: 700;
-    text-decoration: underline;
-    text-transform: uppercase;
-    color: #ffffff;
-
-  }
-
-  #bgFeatureLocation {
-    font-family: $font-body;
-    font-size:.75em;
-    color: #ffffff;
-  }
-
-  .bgFeatureBox {
-    float: right;
+  .bgfeaturebox {
+    @include span (12);
     text-align: right;
-    clear: both;
-  }
+    padding-top: 25px;
 
-  .splashText {
+    .bgfeature {
+      font-family: $font-heading;
+      font-size:.75em;
+      font-weight: 700;
+      text-decoration: underline;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .bgfeaturelocation {
+      font-family: $font-body;
+      font-size:.75em;
+      color: #ffffff;
+    }
+  }
+  .splashtext {
     margin-top: 53vh; /* Kevin/Roman - Requires proper fix for dropping content */
     width:100%;
     display: inline-block;
     text-align: center;
   }
 
-  .splashText>h1 {
+  .splashtext>h1 {
     font-family: $font-heading;
-    font-weight:900;
-    font-size:2.5em;
+    font-weight: 900;
+    font-size: 2.5em;
     color: $brand-primary;
     font-variant: normal;
     text-transform: uppercase;
 
   }
 
-  .splashText>h2 {
+  .splashtext>h2 {
     font-family: $font-body;
     font-size:1.5em;
     font-variant: normal;
     color:#ffffff;
   }
 
-  .ctaButtonWrapper {
+  .ctabuttonwrapper {
     width: 100%;height:40px;
     display:flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
   }
-  .ctaButton {
+  .ctabutton {
     padding: 10px 40px;
     margin: 40px 10px 10px 10px;
     float: left;
@@ -81,52 +81,43 @@
     -webkit-transition: all 0.1s;
   }
 
-  .ctaButton:hover,
-  .ctaButton:focus {
+  .ctabutton:hover,
+  .ctabutton:focus {
     text-decoration: none;
     color: #fff;
     background-color: $brand-primary-high;
   }
 
-  .ctaButton:active {
+  .ctabutton:active {
     transform: translate(0px,5px);
     -webkit-transform: translate(0px,5px);
-    border-bottom: 1px solid #5e532b;
+    border-bottom: 1px solid $brand-primary-low;
   }
 
   .heroboxes {
     margin-top: 200px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    clear: both;
-  }
-  .hb1 {
-    margin-right: 35px;
-  }
-  .hb3 {
-    margin-left: 35px;
-  }
-  .herobox {
-    /* Kevin/Roman - These elements and top-borders need to have
-    padding between them, but not padding on the outside edges
-    or else things won't line up with existing container elements. */
-    max-width: 33.3%; /* I know it's garbage */
-    border-top:2px solid #ffffff;
-  }
-  .herobox h1 {
-    font-style: italic;
-    font-family: $font-heading;
-    font-weight:900;
-  }
-  .herobox p {
-    font-family: $font-body;
-    font-size: 16px;
-    line-height:1.45em;
-  }
 
-/* because of the border, these "shift" when hovered? */
+    h1 {
+      font-style: italic;
+      font-family: $font-heading;
+      font-weight: 900;
+      font-size: 30px;
+    }
+    p {
+      font-family: $font-body;
+      font-size: 16px;
+      line-height: 1.6em;
+    }
+
+    .herobox {
+      border-top:2px solid $white;
+      @include span (4);
+    }
+
+    .hb3 {
+      float: right;
+    }
+
   .herobutton{
     display: inline-block;
     border:1px solid #FFFFFF;
@@ -144,5 +135,15 @@
     background-color: $brand-primary;
     border: none;
     text-decoration: none;
+    border: 1px solid transparent;
   }
+
+  @media (max-width: 700px) {
+    .hb1, .hb2, .hb3 {
+      @include span (100%);
+      margin-top: 25px;
+      border-top: 4px solid #ffffff;
+    }
+  }
+}
 }
