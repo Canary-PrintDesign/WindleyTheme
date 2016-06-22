@@ -10,12 +10,26 @@
   }
 
   .nav-wrapper {
-    @include display(flex);
-    position: absolute;
-    bottom: 0;
+    @include position(absolute, null 0 0 0);
   }
 
-  a {
+  .menu-main-menu-1-container,
+  .logo-wrapper,
+  .menu-main-menu-2-container {
+    @include span(4);
+
+    > ul > li {
+      @include span(6);
+
+      > a {
+        @include padding(1rem 0);
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+
+  .menu a {
     color: $topnav-link-color;
     text-decoration: none;
 
@@ -26,7 +40,7 @@
 
   .logo-wrapper {
     position: relative;
-    width: $topnav-logo-width;
+    height: $topnav-height;
   }
 
   .custom-logo-link {
@@ -51,11 +65,6 @@
 
       &:not(.active) .sub-menu {
         display: none;
-      }
-
-      > a {
-        display: inline-block;
-        padding: 1rem 5vw;
       }
 
       &-has-children {
