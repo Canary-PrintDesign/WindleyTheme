@@ -13,7 +13,7 @@ $white:               #FFFFFF;
 $body-color:          $tundora;
 $body-bg:             $white;
 $body-padding-mobile: 0.5rem;
-$container-width:     1170px;
+$container-width:     1140px;
 
 $link-color:          $teak;
 $link-color-active:   $tundora;
@@ -33,7 +33,7 @@ $brand-primary-low:   $pesto;
 $brand-secondary:     $tundora;
 
 $topnav-height:                   86px;
-$topnav-logo-width:               318px;
+$topnav-logo-width:               auto; //Fullsize logo width: 360px.  Scrolled width: ~200px.  Probably better set by the container though.
 $topnav-logo-overhang:            55px;
 $topnav-color:                    $body-color;
 $topnav-bg:                       $athens-gray;
