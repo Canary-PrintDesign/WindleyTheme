@@ -25,14 +25,12 @@
   }
 
   h4 {
+    @include heading-style;
     display: inline-block;
     padding-bottom: 2px;
     margin-bottom: 0.5rem;
     border-bottom: 2px solid $footer-color;
-    font-family: $font-heading;
-    font-weight: 800;
     font-size: 13px;
-    text-transform: uppercase;
   }
 
   i {

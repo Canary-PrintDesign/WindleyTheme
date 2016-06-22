@@ -1,0 +1,6 @@
+@mixin heading-style {
+  font-family: $font-heading;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
