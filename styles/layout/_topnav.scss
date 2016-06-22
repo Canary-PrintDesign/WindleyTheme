@@ -1,9 +1,13 @@
 .topnav {
-  position: relative;
   height: $topnav-height;
   background: $topnav-bg;
   color: $topnav-color;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.15);
+
+  .container {
+    position: relative;
+    height: $topnav-height;
+  }
 
   .nav-wrapper {
     @include display(flex);
@@ -96,40 +100,14 @@
     }
   }
 
-
   .social-links {
+    @include position(absolute, 0 0 null null);
 
-    .social-highlight {
-      float: right;
-      background: $white;
-      padding: 0px 3px 3px 3px;
-      text-align: center;
-
-      .social-icons, a {
-        color: $brand-primary;
-
-        &:hover {
-          color: $brand-primary-low;
-        }
-      }
-
-      .fa {
-        vertical-align: 0% !important;
-        display: inline !important;
-       }
+    h4 {
+      display: inline-block;
 
       a {
-        font-size: 13px;
-        margin: 0.5em;
-      }
-
-      h4 {
-        border-bottom: none;
-        display: inline-block;
-        font-family: $font-heading;
-
-
-        text-transform: uppercase;
+        font-weight: 700;
       }
     }
   }

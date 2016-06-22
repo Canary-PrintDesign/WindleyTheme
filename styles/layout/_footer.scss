@@ -18,7 +18,6 @@
     border-bottom: 1px solid transparent;
 
     &:hover {
-      text-decoration: none;
       border-bottom-color: $link-color-active;
       color: $link-color-active;
     }
@@ -33,16 +32,9 @@
     font-size: 13px;
   }
 
-  i {
-    margin: 0 0.5em;
-
-    &.fa-lg {
-      vertical-align: 0;
-    }
-  }
-
   .address-list {
     list-style: none;
+
     i {
       margin-left: 0;
     }
@@ -66,31 +58,6 @@
     @include span(6);
   }
 
-  .social-links {
-    @include span(2);
-    .social-highlight {
-      float: right;
-      background: $white;
-      margin-top: -$footer-padding;
-      padding: $footer-padding $footer-padding ($footer-padding / 3);
-      text-align: right;
-
-        a:hover {
-          border-bottom-color: transparent !important;
-        }
-
-      .social-icons {
-        color: $social-icons;
-      }
-
-      h4 {
-        border-bottom: none;
-        margin-right: 0.5em;
-        text-transform: none !important;
-      }
-    }
-  }
-
   .footer-bottom {
     position: relative;
     margin-top: $footer-padding * 3;
@@ -106,6 +73,12 @@
   .copyright {
     @include span (6);
     float: left;
+  }
+
+  .social-links h4 {
+    border-bottom: none;
+    text-transform: none;
+    letter-spacing: 0;
   }
 
 
