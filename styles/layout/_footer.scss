@@ -81,36 +81,42 @@
     letter-spacing: 0;
   }
 
+  @media (max-width: 450px) {
+    .contact-info, .social-links, .credits, .copyright {
+      @include span(12);
+      text-align: center;
+    }
 
-  @media (min-width: 1000px) {
-    .contact-info,
-    .site-map,
     .social-links {
-      @include span(4);
-    }
-  }
-
-  @media (min-width: 700px) and (max-width: 999px) {
-    .contact-info, .site-map, .social-links {
-      @include span(4);
+      background: transparent;
+      margin: 1rem 0;
+      padding: 0;
     }
 
+    .footer-bottom {
+      margin-top: 0;
+    }
+
+    .footer-menu-left,
     .footer-menu-right {
       display: none;
     }
   }
 
-  @media (max-width: 699px) {
-    padding: $body-padding-mobile;
-
-    .contact-info, .social-links {
-      @include span (6);
-    }
-
+  @media (min-width: 451px) {
     .social-links {
       position: absolute;
-      top: $footer-padding;
-      right: 0;
+      top: -$body-padding-mobile;
+      right: -$body-padding-mobile;
+      padding: $body-padding-mobile $body-padding-mobile ($body-padding-mobile / 3);
+    }
+  }
+
+  @media (min-width: 451px) and (max-width: 699px) {
+    padding: $body-padding-mobile;
+
+    .contact-info {
+      @include span (6);
     }
 
     .site-map-group {
@@ -118,20 +124,29 @@
     }
   }
 
-  @media (max-width: 450px) {
-    .contact-info, .social-links, .credits, .copyright {
-      @include span (12);
-      text-align: center !important;
+  @media (min-width: 700px) {
+    .contact-info,
+    .site-map {
+      @include span(4);
     }
 
     .social-links {
-      position: relative !important;
-      padding-top: $footer-padding * 2;
+      top: -$footer-padding;
+      right: 0;
+      padding: $footer-padding $footer-padding ($footer-padding / 3);
+    }
+  }
 
-      .social-highlight {
-        float: none !important;
-        text-align: center !important;
-      }
+  @media (min-width: 700px) and (max-width: 999px) {
+    .contact-info, .site-map {
+      @include span(4);
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .contact-info,
+    .site-map {
+      @include span(4);
     }
   }
 }
