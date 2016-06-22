@@ -35,4 +35,3 @@
 </head>
 <body <?php body_class(); ?>>
   <?php include('_topnav.php'); ?>
-  <div id="pageup"></div>
