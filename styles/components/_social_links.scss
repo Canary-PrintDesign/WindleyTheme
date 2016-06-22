@@ -1,0 +1,29 @@
+.social-links {
+  padding: 0.5rem;
+  background: $white;
+  text-align: center;
+  font-size: 15px;
+
+  > * {
+    margin: 0 0.5em;
+  }
+
+  a:link {
+    color: $link-color;
+
+    &:hover {
+      color: $link-color-active;
+      border-bottom-color: transparent;
+    }
+  }
+
+  [class^="fa-"] {
+    vertical-align: 0;
+  }
+
+  h4 {
+    @include heading-style;
+    border-bottom: none;
+    margin-right: 0.5em;
+  }
+}

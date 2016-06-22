@@ -1,17 +1,35 @@
 .topnav {
-  position: relative;
   height: $topnav-height;
   background: $topnav-bg;
   color: $topnav-color;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.15);
 
-  .nav-wrapper {
-    @include display(flex);
-    position: absolute;
-    bottom: 0;
+  .container {
+    position: relative;
+    height: $topnav-height;
   }
 
-  a {
+  .nav-wrapper {
+    @include position(absolute, null 0 0 0);
+  }
+
+  .menu-main-menu-1-container,
+  .logo-wrapper,
+  .menu-main-menu-2-container {
+    @include span(4);
+
+    > ul > li {
+      @include span(6);
+
+      > a {
+        @include padding(1rem 0);
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+
+  .menu a {
     color: $topnav-link-color;
     text-decoration: none;
 
@@ -22,7 +40,7 @@
 
   .logo-wrapper {
     position: relative;
-    width: $topnav-logo-width;
+    height: $topnav-height;
   }
 
   .custom-logo-link {
@@ -47,11 +65,6 @@
 
       &:not(.active) .sub-menu {
         display: none;
-      }
-
-      > a {
-        display: inline-block;
-        padding: 1rem 5vw;
       }
 
       &-has-children {
@@ -96,40 +109,14 @@
     }
   }
 
-
   .social-links {
+    @include position(absolute, 0 0 null null);
 
-    .social-highlight {
-      float: right;
-      background: $white;
-      padding: 0px 3px 3px 3px;
-      text-align: center;
-
-      .social-icons, a {
-        color: $brand-primary;
-
-        &:hover {
-          color: $brand-primary-low;
-        }
-      }
-
-      .fa {
-        vertical-align: 0% !important;
-        display: inline !important;
-       }
+    h4 {
+      display: inline-block;
 
       a {
-        font-size: 13px;
-        margin: 0.5em;
-      }
-
-      h4 {
-        border-bottom: none;
-        display: inline-block;
-        font-family: $font-heading;
-
-
-        text-transform: uppercase;
+        font-weight: 700;
       }
     }
   }

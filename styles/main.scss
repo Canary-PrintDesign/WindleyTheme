@@ -5,6 +5,10 @@
 @import "susy";
 @import "font-awesome";
 
+@import "mixins/heading_style";
+
+@import "components/social_links";
+
 @import "layout/grid";
 @import "layout/footer";
 @import "layout/topnav";
