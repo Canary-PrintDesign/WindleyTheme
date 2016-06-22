@@ -28,4 +28,3 @@ $('#wprmenu_bar').click(function() {
 </head>
 <body <?php body_class(); ?>>
   <?php include('_topnav.php'); ?>
-  <div id="pageup"></div>

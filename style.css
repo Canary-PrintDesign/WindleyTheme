@@ -227,10 +227,6 @@ body{ /*make this default if not set - used for projects */
     margin-left:20px;
 }
 
-#pageup{
-    height:195px;
-}
-
 div.hentry{
     padding: 0 3%;
 }
@@ -485,10 +481,6 @@ div.hentry{
     #page, #blog, #category {
         margin: 0px auto 40px;
     }
-
-#pageup{
-    height:30px;
-}
 
     #content ul, #content ol{
         margin-left:4%;
