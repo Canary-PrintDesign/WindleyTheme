@@ -97,6 +97,7 @@
   .heroboxes {
     margin-top: 200px;
 
+
     h1 {
       font-style: italic;
       font-family: $font-heading;
@@ -118,6 +119,7 @@
       float: right;
     }
 
+
   .herobutton{
     display: inline-block;
     border:1px solid #FFFFFF;
@@ -137,6 +139,8 @@
     text-decoration: none;
     border: 1px solid transparent;
   }
+}
+
 
   @media (max-width: 700px) {
     .hb1, .hb2, .hb3 {
@@ -145,5 +149,4 @@
       border-top: 4px solid #ffffff;
     }
   }
-}
 }
