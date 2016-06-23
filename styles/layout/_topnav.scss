@@ -13,9 +13,9 @@
     @include position(absolute, null 0 0 0);
   }
 
-  .menu-main-menu-1-container,
+  .topnav-left-container,
   .logo-wrapper,
-  .menu-main-menu-2-container {
+  .topnav-right-container {
     @include span(4);
 
     > ul > li {

@@ -1,11 +1,11 @@
 <nav class="topnav">
   <div class="container">
     <div class="nav-wrapper">
-      <?php wp_nav_menu ( array( 'theme_location' => 'topnav-left' ) ); ?>
+      <?php wp_nav_menu ( array( 'theme_location' => 'topnav-left', 'container_class' => 'topnav-left-container' ) ); ?>
       <div class="logo-wrapper">
         <?php the_custom_logo(); ?>
       </div>
-      <?php wp_nav_menu ( array( 'theme_location' => 'topnav-right' ) ); ?>
+      <?php wp_nav_menu ( array( 'theme_location' => 'topnav-right', 'container_class' => 'topnav-right-container' ) ); ?>
     </div>
     <div class="social-links">
       <h4><a href="#">Careers &nbsp |</a></h4>
