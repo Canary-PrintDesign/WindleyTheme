@@ -15,4 +15,5 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+  <?php include('_topnav_mobile.php'); ?>
   <?php include('_topnav.php'); ?>

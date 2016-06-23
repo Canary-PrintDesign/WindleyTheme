@@ -1,11 +1,11 @@
 <nav class="topnav">
   <div class="container">
     <div class="nav-wrapper">
-      <?php wp_nav_menu ( array( 'theme_location' => 'topnav-left' ) ); ?>
+      <?php wp_nav_menu ( array( 'theme_location' => 'topnav-left', 'container_class' => 'topnav-left-container' ) ); ?>
       <div class="logo-wrapper">
         <a href="<?php echo home_url(); ?>" title="Windley Contracting - Home" class="nav-logo logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Windley Contracting logo"></a>
       </div>
-      <?php wp_nav_menu ( array( 'theme_location' => 'topnav-right' ) ); ?>
+      <?php wp_nav_menu ( array( 'theme_location' => 'topnav-right', 'container_class' => 'topnav-right-container' ) ); ?>
     </div>
     <div class="social-links">
       <h4><a href="#">Careers &nbsp |</a></h4>
@@ -15,8 +15,3 @@
     </div>
   </div>
 </nav>
-<!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
-
-
-
-

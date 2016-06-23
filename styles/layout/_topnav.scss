@@ -13,8 +13,8 @@
     @include position(absolute, null 0 0 0);
   }
 
-  .menu-main-menu-1-container,
-  .menu-main-menu-2-container {
+  .topnav-left-container,
+  .topnav-right-container {
     position: relative;
     bottom: -35px;
 
@@ -42,6 +42,11 @@
     position: relative;
     height: $topnav-height;
     @include span (4);
+
+      img {
+        max-width: 100%;
+        margin-top: 12px;
+      }
   }
 
   // .nav-logo {
@@ -120,3 +125,9 @@
     }
   }
 }
+
+  @media (max-width: 960px) {
+    .topnav {
+      display: none;
+    }
+  }
