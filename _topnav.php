@@ -15,4 +15,3 @@
     </div>
   </div>
 </nav>
-<!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->

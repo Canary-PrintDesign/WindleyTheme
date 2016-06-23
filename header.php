@@ -27,4 +27,5 @@ $('#wprmenu_bar').click(function() {
 </script>
 </head>
 <body <?php body_class(); ?>>
+  <?php include('_topnav_mobile.php'); ?>
   <?php include('_topnav.php'); ?>

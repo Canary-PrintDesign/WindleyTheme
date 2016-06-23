@@ -1,3 +1,9 @@
+@media (max-width: 960px) {
+  .topnav {
+    display: none;
+  }
+}
+
 .topnav {
   height: $topnav-height;
   background: $topnav-bg;
