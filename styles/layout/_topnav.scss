@@ -17,6 +17,12 @@
   .logo-wrapper,
   .topnav-right-container {
     @include span(4);
+    position: relative;
+    height: $topnav-height;
+
+    > ul {
+      @include position(absolute, null 0 0 0);
+    }
 
     > ul > li {
       @include span(6);
