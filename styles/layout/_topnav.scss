@@ -1,5 +1,9 @@
-.topnav {
+.topnav-spacer {
   height: $topnav-height;
+}
+
+.topnav {
+  @include position(fixed, 0 0 null);
   background: $topnav-bg;
   color: $topnav-color;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.15);
