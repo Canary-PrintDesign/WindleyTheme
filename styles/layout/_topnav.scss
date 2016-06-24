@@ -1,5 +1,10 @@
 $topnav-menu-height: 19px;
 $topnav-menu-padding: 16px;
+// This is the amount of blank space above the topnav menu
+// we will use it on the frontend to affix the nav to the top
+$topnav-menu-outerheight: $topnav-menu-height + 2 * $topnav-menu-padding;
+$topnav-offset: $topnav-height - $topnav-menu-outerheight;
+
 .topnav-spacer {
   height: $topnav-height;
 }
@@ -135,4 +140,17 @@ $topnav-menu-padding: 16px;
     display: none;
   }
 }
+
+body.doc-ready:not(.at-scroll-top) .topnav {
+  top: -$topnav-offset;
+  transition: top 250ms;
+
+  .nav-logo img {
+    height: 2 * $topnav-menu-outerheight;
   }
+
+  .social-links {
+    opacity: 0; // in case we don't quite get them off page
+    transition: opacity 250ms 250ms;
+  }
+}
