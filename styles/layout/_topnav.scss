@@ -43,7 +43,8 @@ $topnav-menu-padding: 16px;
 
   .logo-wrapper {
     position: relative;
-    height: $topnav-height;
+    top: -1px;
+    height: 1px;
     @include span (4);
 
       img {
