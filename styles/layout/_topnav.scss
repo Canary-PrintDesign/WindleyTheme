@@ -1,3 +1,5 @@
+$topnav-menu-height: 19px;
+$topnav-menu-padding: 16px;
 .topnav-spacer {
   height: $topnav-height;
 }
@@ -22,7 +24,8 @@
       @include span(2);
 
       > a {
-        @include padding(1rem 0);
+        @include padding($topnav-menu-padding 0);
+        height: $topnav-menu-height;
         display: block;
         text-align: center;
       }
