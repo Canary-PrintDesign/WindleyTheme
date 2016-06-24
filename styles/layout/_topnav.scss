@@ -46,13 +46,17 @@ $topnav-menu-padding: 16px;
     top: -1px;
     height: 1px;
     @include span (4);
-
-      img {
-        max-width: 100%;
-        margin-top: 12px;
-      }
   }
 
+  .nav-logo {
+    @include transform(translate(-50%, -50%));
+    @include position(absolute, $topnav-height null null 50%);
+
+    img {
+      height: 1.6 * $topnav-height;
+      transition: height 250ms;
+    }
+  }
 
   .menu,
   .sub-menu {
