@@ -10,6 +10,7 @@ $topnav-offset: $topnav-height - $topnav-menu-outerheight;
 }
 
 .topnav {
+  z-index: 999;
   @include position(fixed, 0 0 null);
   background: $topnav-bg;
   color: $topnav-color;
