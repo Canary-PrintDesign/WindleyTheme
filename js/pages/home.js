@@ -3,4 +3,8 @@ function onScroll() {
 }
 
 $(window).on('scroll', onScroll);
-onScroll();
+
+$(function() {
+  $(document.body).addClass('doc-ready');
+  onScroll();
+});

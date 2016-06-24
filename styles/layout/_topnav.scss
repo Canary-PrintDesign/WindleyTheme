@@ -1,5 +1,16 @@
-.topnav {
+$topnav-menu-height: 19px;
+$topnav-menu-padding: 16px;
+// This is the amount of blank space above the topnav menu
+// we will use it on the frontend to affix the nav to the top
+$topnav-menu-outerheight: $topnav-menu-height + 2 * $topnav-menu-padding;
+$topnav-offset: $topnav-height - $topnav-menu-outerheight;
+
+.topnav-spacer {
   height: $topnav-height;
+}
+
+.topnav {
+  @include position(fixed, 0 0 null);
   background: $topnav-bg;
   color: $topnav-color;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.15);
@@ -7,10 +18,6 @@
   .container {
     position: relative;
     height: $topnav-height;
-  }
-
-  .nav-wrapper {
-    @include position(absolute, null 0 0 0);
   }
 
   .topnav-left-container,
@@ -22,7 +29,8 @@
       @include span(2);
 
       > a {
-        @include padding(1rem 0);
+        @include padding($topnav-menu-padding 0);
+        height: $topnav-menu-height;
         display: block;
         text-align: center;
       }
@@ -40,19 +48,20 @@
 
   .logo-wrapper {
     position: relative;
-    height: $topnav-height;
+    top: -1px;
+    height: 1px;
     @include span (4);
-
-      img {
-        max-width: 100%;
-        margin-top: 12px;
-      }
   }
 
-  // .nav-logo {
-  //   position: relative;
-  //   @include span (4);
-  // }
+  .nav-logo {
+    @include transform(translate(-50%, -50%));
+    @include position(absolute, $topnav-height null null 50%);
+
+    img {
+      height: 1.6 * $topnav-height;
+      transition: height 250ms;
+    }
+  }
 
   .menu,
   .sub-menu {
@@ -126,8 +135,22 @@
   }
 }
 
-  @media (max-width: 960px) {
-    .topnav {
-      display: none;
-    }
+@media (max-width: 960px) {
+  .topnav {
+    display: none;
   }
+}
+
+body.doc-ready:not(.at-scroll-top) .topnav {
+  top: -$topnav-offset;
+  transition: top 250ms;
+
+  .nav-logo img {
+    height: 2 * $topnav-menu-outerheight;
+  }
+
+  .social-links {
+    opacity: 0; // in case we don't quite get them off page
+    transition: opacity 250ms 250ms;
+  }
+}
