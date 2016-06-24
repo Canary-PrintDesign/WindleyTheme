@@ -47,6 +47,11 @@
     color: $brand-primary;
     font-variant: normal;
     text-transform: uppercase;
+    text-shadow:
+      -1px 0px 0 $brand-primary-low,
+      0px -1px 0 $brand-primary-low,
+      1px 0px 0 $brand-primary-low,
+      0px 1px 0 $brand-primary-low;
 
   }
 
