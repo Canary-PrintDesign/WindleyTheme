@@ -2,7 +2,8 @@
   background-color: $tundora;
 
   .background-image {
-    @include position(fixed, 0);
+    @include position(absolute, 0);
+    @include transform(scale(1.1));
     background-size: cover;
     transition: all 500ms; // filter is prefixed, let's just transtition all
     z-index: -1;
