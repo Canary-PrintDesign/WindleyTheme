@@ -6,7 +6,6 @@ function toggleSubNav(e) {
 function closeOnClickOutside(e) {
   if($(e.target).closest('.menu').length === 0) {
     $('.menu-item-has-children').removeClass('active');
-    e.preventDefault();
   }
 }
 
