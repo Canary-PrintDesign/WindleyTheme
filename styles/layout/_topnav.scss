@@ -13,10 +13,6 @@
     height: $topnav-height;
   }
 
-  .nav-wrapper {
-    @include position(absolute, null 0 0 0);
-  }
-
   .topnav-left-container,
   .topnav-right-container {
     position: relative;
