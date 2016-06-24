@@ -49,10 +49,6 @@
       }
   }
 
-  // .nav-logo {
-  //   position: relative;
-  //   @include span (4);
-  // }
 
   .menu,
   .sub-menu {
@@ -126,8 +122,9 @@
   }
 }
 
-  @media (max-width: 960px) {
-    .topnav {
-      display: none;
-    }
+@media (max-width: 960px) {
+  .topnav {
+    display: none;
+  }
+}
   }
