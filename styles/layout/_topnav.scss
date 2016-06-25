@@ -119,6 +119,7 @@ $topnav-offset: $topnav-height - $topnav-menu-outerheight;
 
       &:hover {
         color: $submenu-link-color-active;
+        text-decoration: none;
       }
     }
   }
