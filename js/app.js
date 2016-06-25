@@ -19,6 +19,13 @@ function toggleActive(e) {
   $(selector).toggleClass('active');
 }
 
+function onScroll() {
+  $('body').toggleClass('past-scroll-top', $(window).scrollTop() > 0);
+}
+
+$(window).on('scroll', onScroll);
+onScroll();
+
 $(function() {
   $(document.body).on('click', '.menu-item-has-children > a', toggleSubNav);
   $(document.body).on('click', closeOnClickOutside);

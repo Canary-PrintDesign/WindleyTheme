@@ -46,5 +46,4 @@
 endforeach;
 wp_reset_postdata();?>
 
-<script src="<?php echo get_stylesheet_directory_uri();?>/build/js/pages/home.js"></script>
 <?php get_footer(); ?>
