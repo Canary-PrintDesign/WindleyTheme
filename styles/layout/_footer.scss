@@ -76,10 +76,22 @@
     float: left;
   }
 
-  .social-links h4 {
-    border-bottom: none;
-    text-transform: none;
-    letter-spacing: 0;
+  .social-links {
+    a {
+      color: $brand-primary;
+    }
+
+    a:hover {
+      color: $brand-primary-low;
+      text-decoration: none;
+      border-bottom-color: transparent;
+    }
+
+    h4 {
+      border-bottom: none;
+      text-transform: none;
+      letter-spacing: 0;
+    }
   }
 
   @media (max-width: 450px) {
