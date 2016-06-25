@@ -143,7 +143,7 @@ $topnav-offset: $topnav-height - $topnav-menu-outerheight;
   }
 }
 
-body.doc-ready:not(.at-scroll-top) .topnav {
+body.past-scroll-top .topnav {
   top: -$topnav-offset;
   transition: top 250ms;
 

@@ -8,7 +8,7 @@
     z-index: -1;
   }
 
-  &:not(.at-scroll-top) .background-image {
+  &.past-scroll-top .background-image {
     @include filter(blur(5px));
     opacity: 0.5;
   }
