@@ -16,11 +16,11 @@
   a {
     color: $footer-link-color;
     border-bottom: 1px solid transparent;
+    text-decoration: none;
 
     &:hover {
       border-bottom-color: $link-color-active;
       color: $link-color-active;
-      text-decoration: none;
     }
   }
 
@@ -33,9 +33,11 @@
     font-size: 13px;
   }
 
-  .address-list {
-    list-style: none;
+  ul {
+    @include unstyled-list;
+  }
 
+  .address-list {
     i {
       margin-left: 0;
     }
