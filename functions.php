@@ -2,6 +2,15 @@
 
 require get_template_directory() . '/includes/custom-meta/_custom-meta.php';
 
+// Short Excerpt code for limiting characters on projects page
+function get_the_short_excerpt(){
+$excerpt = get_the_excerpt();
+$excerpt = strip_shortcodes($excerpt);
+$excerpt = strip_tags($excerpt);
+$the_str = substr($excerpt, 0, 60);
+return $the_str;
+}
+
 // Adds classes to Categories Columns on Categories pages
 add_filter('post_class','category_two_column_classes');
 
@@ -21,11 +30,11 @@ return $classes;
 
 
 // Registration of various navigation menus
->>>>>>> 4bd16f9... Add projects page  (categories listing)
     register_nav_menus(
         array(
         'topnav-left'   => 'Main Menu - Left Side',
         'topnav-right'  => 'Main Menu - Right Side',
+        'category-menu' => 'Category Menu',
         'footer-menu-1' => 'Footer Menu 1',
         'footer-menu-2' => 'Footer Menu 2'
         )

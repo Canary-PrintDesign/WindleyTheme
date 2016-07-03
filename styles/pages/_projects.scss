@@ -1,8 +1,7 @@
 .category {
-  background-color: $white;
-
   .hero-container {
     height: $hero-height;
+
     .hero-image {
       min-height: 100%;
       background-size: cover;
@@ -20,94 +19,30 @@
       }
   }
 
-  .category-banner {
-
-    .category-heading {
-      background-color: $athens-gray;
-      line-height: 80px;
-      height: 80px;
-      margin-bottom: 40px;
-
-      ul {
-        width: 100%;
-
-          a {
-          width: span(4 wide);
-          float: left;
-          font-family: $font-heading;
-          font-style: italic;
-          font-weight: 900;
-          font-size: 25px;
-          text-align: center;
-          text-transform: uppercase;
-          line-height: 80px;
-          height: 80px;
-          background-color: $athens-gray;
-          }
-
-            .arrow_box {
-              position: relative;
-            }
-            .arrow_box:after {
-              transition:all 0.3s;
-              top: 100%;
-              left: 50%;
-              border: solid transparent;
-              content: " ";
-              position: absolute;
-              border-top-color: $athens-gray;
-              border-width: 10px;
-              margin-left: -10px;
-            }
-          .arrow_box:hover:after {
-            border-top-color: $teak;
-          }
-
-          a:hover {
-            background-color: $teak;
-          }
-
-
-        li {
-          color: $tundora;
-          height: 80px;
-          display: inline-block;
-        }
-      }
-    }
-  }
-
 
   .project-listing {
     color: $body-color;
 
     .two-column-post {
       @include span (6);
-      height: 300px;
+      height: auto;
+      margin-bottom: 60px;
+      position: relative;
     }
 
     .media {
-
       img {
-        @include span (3);
-        width: 263px;
-        height: 160px;
-        border-radius: 3px;
+        @include span (6);
+        border-radius: 4px;
+        margin-right: 15px;
       }
+
       .media-left {
-        height: 160px;
-        padding-right: 10px;
-        display: table-cell;
-        vertical-align: top;
+        height: auto;
       }
 
       .media-body {
-        height: 160px;
-        font-family: $font-body;
-        font-size: 14px;
         display: table-cell;
-        vertical-align: top;
-        width: 10000px;
 
         h4 {
           font-family: $font-heading;
@@ -115,100 +50,86 @@
           font-weight: 900;
           font-size: 18px;
           color: $tundora;
-          text-decoration: none;
+          margin: 0;
         }
 
         a h4:hover {
-            text-decoration: none;
             color: $teak;
         }
 
-        a.details-button {
+        p {
+          line-height: 18px;
+          font-size: 14px;
+        }
+
+        .details-button-container {
+          position: absolute;
+          bottom: 0;
+        }
+
+        a.details-button, a.website-button {
           font-family: $font-heading;
           font-weight: 900;
           font-size: 14px;
           border: 1px solid;
-          border-radius: 4px 0px 0px 4px;
+          border-radius: 4px;
           padding: 6px;
+          margin-right: 15px;
         }
 
         a.details-button:hover {
-          text-decoration: none;
           color: $tundora;
         }
-
       }
     }
-
-
-
-
   }
 
+  .next, .prev {
+    @include span (6);
 
-
-  /*--------------OLD CATEGORY CSS - TO BE REMOVED WHEN NOT USED-----------*/
-
-
+    a {
+      font-family: $font-heading;
+      font-weight: 700;
+    }
+  }
 
   .next{
-     float:right;
-      margin-right:4%;
+    float:right;
+    text-align: right;
   }
+}
 
-  .prev{
-     float:left;
-      margin-left:4%;
+
+@media (max-width: 1000px) {
+  .category {
+    .project-listing {
+      .media {
+        img {
+          @include span (12);
+          padding-right: 0;
+        }
+
+        .media-body {
+          h4 {
+            text-align: center;
+          }
+
+          p {
+            @include span (12);
+            padding-bottom: 35px;
+          }
+        }
+      }
+    }
   }
+}
 
-  .archive_nav a{
-      font-size:16px;
-      background-color: #0E2C48;
-      border-radius: 8px;
-      color: #F3ECDC;
-      padding: 5px 12px;
-      text-shadow: 0 0 2px #000000;
-      transition: all 0.3s ease 0s;
-      border:2px solid #fff;
-  }
-
-  .archive_nav a:hover, .archive_nav a:focus, .archive_nav a:active{
-      background-color:#7599ba;
-      text-shadow:0 0 8px #000;
-      text-decoration:none;
-  }
-  .prevpost{
-      float:left;
-      margin-left:3%;
-  }
-
-  .nextpost{
-      float:right;
-      margin-right:3%;
-  }
-
-  .prevpost a, .nextpost a{
-      display:block;
-      padding:10px;
-      line-height:1em;
-      color:#f4c361;
-      background:rgba(0,0,0,0.6);
-      border-radius:50%;
-  }
-
-  .prevpost a:hover, .nextpost a:hover,.prevpost a:active, .nextpost a:active,.prevpost a:focus, .nextpost a:focus{
-      text-decoration:none;
-      background:rgba(0,0,0,0.8);
-      color:#fff;
-  }
-
-  .cat_title_single{
-      position:relative;
-      top:-18px;
-      font-size:14px;
-  }
-
-  @media (max-width: 1050px) {
-
+@media (max-width: 500px) {
+  .category {
+    .project-listing {
+      .two-column-post {
+        @include span (12);
+      }
+    }
   }
 }

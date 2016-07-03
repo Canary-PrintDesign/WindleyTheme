@@ -10,19 +10,13 @@
   </div>
 </div>
 
-
 <div class="category-banner">
     <div class="category-heading">
       <div class="container">
-        <ul>
-          <a class="arrow_box" href="#"><li>Civil</li
-          ></a><a class="arrow_box" href="#"><li>Commercial</li
-          ></a><a class="arrow_box" href="#"><li>Residential</li></a>
-        </ul>
+        <?php wp_nav_menu ( array( 'theme_location' => 'category-menu', 'container_class' => '' ) ); ?>
       </div>
     </div>
 </div>
-
 
 <?php       if ( is_category('Civil Projects')        || has_category( 'Civil Projects' )) { ?>
 <?php }else if ( is_category('Commercial Projects')   || has_category( 'Commercial Projects' ) ) { ?>
@@ -39,18 +33,29 @@
           <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>" class="media-left">
             <?php
               if(has_post_thumbnail()){
-              the_post_thumbnail(array(265,155,'class' => 'thumbnail') );
-            } ?>
+                the_post_thumbnail(array(300,200,'class' => 'thumbnail') );
+              }
+            ?>
           </a>
         </div>
         <div class="media-body"> <!-- The Project Title -->
           <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
             <h4><?php the_title(); ?></h4>
           </a>
-            <?php the_excerpt(); ?> <!-- The Project Excerpt -->
-          <a href="<?php echo get_permalink(); ?>" class="details-button">
-            DETAILS
-          </a>
+          <p><?php echo get_the_short_excerpt(); ?>...</p> <!-- The Project Excerpt -->
+          <div class="details-button-container">
+            <a href="<?php echo get_permalink(); ?>" class="details-button">
+              DETAILS
+            </a>
+            <?php
+              $key = 'website';
+              $themeta = get_post_meta($post->ID, $key, TRUE);
+              if($themeta != '') { ?>
+                <a class="website-button" href="<?php echo(get_post_meta( get_the_ID(), 'website', true ));?>">WEBSITE</a>
+              <?php
+              }
+            ?>
+          </div>
         </div>
       </div>
     </div>
@@ -58,19 +63,15 @@
     <?php endwhile; else: ?>
      <p>Sorry, no posts were found.</p>
     <?php endif; ?>
-
-    <div>
-      <div class="prev">
-        <?php previous_posts_link(); ?>
-      </div>
-      <div class="next">
-        <?php next_posts_link(); ?>
-      </div>
-    </div>
   </div>
+  <div class="container">
+    <div class="prev">
+      <?php previous_posts_link(); ?>
+    </div>
+    <div class="next">
+      <?php next_posts_link(); ?>
+    </div>
+   </div>
 </div>
-
-
-
 
 <?php get_footer(); ?>
