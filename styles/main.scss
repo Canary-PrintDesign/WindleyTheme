@@ -1,6 +1,9 @@
 @import "setup/constants";
 @import "setup/susy";
 
+@import "normalize";
+@include normalize();
+
 @import "bourbon";
 @import "susy";
 @import "font-awesome";
