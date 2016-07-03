@@ -46,16 +46,20 @@ function prfx_meta_callback( $post ) {
     ?>
 
     <p>
-        <label for="client-name" class="prfx-row-title"><?php _e( 'Client Name:', 'prfx-textdomain' )?></label>
+        <label for="client-name" class="prfx-row-title"><?php _e( 'Client Name:*', 'prfx-textdomain' )?></label>
         <input type="text" name="client-name" id="meta-text" value="<?php if ( isset ( $prfx_stored_meta['client-name'] ) ) echo $prfx_stored_meta['client-name'][0]; ?>" />
     </p>
     <p>
-        <label for="location" class="prfx-row-title"><?php _e( 'Location:', 'prfx-textdomain' )?></label>
+        <label for="location" class="prfx-row-title"><?php _e( 'Location:*', 'prfx-textdomain' )?></label>
         <input type="text" name="location" id="meta-text" value="<?php if ( isset ( $prfx_stored_meta['location'] ) ) echo $prfx_stored_meta['location'][0]; ?>" />
     </p>
     <p>
+        <label for="website" class="prfx-row-title"><?php _e( 'Website URL:', 'prfx-textdomain' )?></label>
+        <input type="text" name="website" id="meta-text" value="<?php if ( isset ( $prfx_stored_meta['website'] ) ) echo $prfx_stored_meta['website'][0]; ?>" />
+    </p>
+    <p>
         <label for="architect" class="prfx-row-title"><?php _e( 'Architect:', 'prfx-textdomain' )?></label>
-        <input type="text" name="architect" id="architect" value="<?php if ( isset ( $prfx_stored_meta['architect'] ) ) echo $prfx_stored_meta['architect'][0]; ?>" />
+        <input type="text" name="architect" id="meta-text" value="<?php if ( isset ( $prfx_stored_meta['architect'] ) ) echo $prfx_stored_meta['architect'][0]; ?>" />
     </p>
 
     <?php
@@ -86,8 +90,20 @@ function prfx_meta_save( $post_id ) {
     if( isset( $_POST[ 'client-name' ] ) ) {
         update_post_meta( $post_id, 'client-name', sanitize_text_field( $_POST[ 'client-name' ] ) );
     }
+    if( isset( $_POST[ 'website' ] ) ) {
+        update_post_meta( $post_id, 'website', sanitize_text_field( $_POST[ 'website' ] ) );
+    }
 }
 add_action( 'save_post', 'prfx_meta_save' );
+
+
+// Style those forms a bit
+function admin_style() {
+  wp_enqueue_style('admin-styles', get_template_directory_uri().'/meta-box-styles.css');
+}
+add_action('admin_enqueue_scripts', 'admin_style');
+
+
 // --END "Project Location" Meta-Box--
 
 ?>
