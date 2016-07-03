@@ -32,7 +32,7 @@ function menu_name($location){
  * Adds a meta box to the post editing screen
  */
 function prfx_custom_meta() {
-    add_meta_box( 'prfx_meta', __( 'Project Location', 'prfx-textdomain' ), 'prfx_meta_callback', 'post' );
+    add_meta_box( 'prfx_meta', __( 'Project Information', 'prfx-textdomain' ), 'prfx_meta_callback', 'post' );
 }
 add_action( 'add_meta_boxes', 'prfx_custom_meta' );
 
@@ -46,8 +46,16 @@ function prfx_meta_callback( $post ) {
     ?>
 
     <p>
-        <label for="meta-text" class="prfx-row-title"><?php _e( 'Location:', 'prfx-textdomain' )?></label>
-        <input type="text" name="meta-text" id="meta-text" value="<?php if ( isset ( $prfx_stored_meta['location'] ) ) echo $prfx_stored_meta['location'][0]; ?>" />
+        <label for="client-name" class="prfx-row-title"><?php _e( 'Client Name:', 'prfx-textdomain' )?></label>
+        <input type="text" name="client-name" id="meta-text" value="<?php if ( isset ( $prfx_stored_meta['client-name'] ) ) echo $prfx_stored_meta['client-name'][0]; ?>" />
+    </p>
+    <p>
+        <label for="location" class="prfx-row-title"><?php _e( 'Location:', 'prfx-textdomain' )?></label>
+        <input type="text" name="location" id="meta-text" value="<?php if ( isset ( $prfx_stored_meta['location'] ) ) echo $prfx_stored_meta['location'][0]; ?>" />
+    </p>
+    <p>
+        <label for="architect" class="prfx-row-title"><?php _e( 'Architect:', 'prfx-textdomain' )?></label>
+        <input type="text" name="architect" id="architect" value="<?php if ( isset ( $prfx_stored_meta['architect'] ) ) echo $prfx_stored_meta['architect'][0]; ?>" />
     </p>
 
     <?php
@@ -72,7 +80,12 @@ function prfx_meta_save( $post_id ) {
     if( isset( $_POST[ 'location' ] ) ) {
         update_post_meta( $post_id, 'location', sanitize_text_field( $_POST[ 'location' ] ) );
     }
-
+    if( isset( $_POST[ 'architect' ] ) ) {
+        update_post_meta( $post_id, 'architect', sanitize_text_field( $_POST[ 'architect' ] ) );
+    }
+    if( isset( $_POST[ 'client-name' ] ) ) {
+        update_post_meta( $post_id, 'client-name', sanitize_text_field( $_POST[ 'client-name' ] ) );
+    }
 }
 add_action( 'save_post', 'prfx_meta_save' );
 // --END "Project Location" Meta-Box--
