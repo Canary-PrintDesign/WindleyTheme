@@ -38,6 +38,13 @@ $topnav-offset: $topnav-height - $topnav-menu-outerheight;
     }
   }
 
+  .menu,
+  .sub-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
   .menu a {
     color: $topnav-link-color;
     text-decoration: none;
@@ -59,22 +66,15 @@ $topnav-offset: $topnav-height - $topnav-menu-outerheight;
     @include position(absolute, $topnav-height null null 50%);
 
     img {
+      max-width: none;
       height: 1.6 * $topnav-height;
       transition: height 250ms;
     }
   }
 
-  .menu,
-  .sub-menu {
-    list-style: none;
-  }
-
   .menu {
-    font-family: $font-heading;
-    font-weight: 800;
+    @include heading-style;
     font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
 
     > .menu-item {
       display: inline-block;
@@ -82,27 +82,11 @@ $topnav-offset: $topnav-height - $topnav-menu-outerheight;
       &:not(.active) .sub-menu {
         display: none;
       }
-
-      &-has-children {
-        position: relative;
-
-        > a::after {
-          position: relative;
-          top: 1px;
-          margin-left: 1rem;
-          font-family: FontAwesome;
-          content: "#{$fa-var-angle-down}";
-        }
-
-        &.active > a::after {
-          content: "#{$fa-var-angle-up}";
-        }
-      }
     }
   }
 
   .sub-menu {
-    background: $submenu-bg;
+    background: $topnav-bg;
     box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.1), inset 0 5px 5px rgba(0, 0, 0, 0.15);
     position: absolute;
 
@@ -114,11 +98,9 @@ $topnav-offset: $topnav-height - $topnav-menu-outerheight;
     a {
       display: block;
       padding: 1rem;
-      color: $submenu-link-color;
       text-align: center;
 
       &:hover {
-        color: $submenu-link-color-active;
         text-decoration: none;
       }
     }

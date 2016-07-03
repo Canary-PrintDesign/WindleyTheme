@@ -46,6 +46,7 @@ module.exports = function(grunt) {
         options: {
           loadPath: [
             'node_modules/susy/sass',
+            require('path').dirname(require.resolve('normalize-scss'))
           ].concat(require("node-font-awesome").scssPath)
            .concat( require("bourbon").includePaths)
         },
