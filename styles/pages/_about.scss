@@ -1,0 +1,63 @@
+// CARVE THIS OUT WHEN CREATING STANDARD HERO SETTINGS
+.category {
+  .hero-container {
+    height: 250px;
+
+    .hero-image {
+      min-height: 100%;
+      background-size: cover;
+    }
+  }
+
+  .hero-heading {
+    @include span (12);
+    margin-top: 150px;
+
+      h1 {
+        font-family: $font-body;
+        font-style: italic;
+        font-weight: 900;
+      }
+  }
+}
+// END CARVE
+
+
+.about-page {
+  .content, .heading {
+    @include span (8);
+
+    h1 {
+      font-family: $font-heading;
+      font-size: 21px;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-style: italic;
+      margin-top: 60px;
+    }
+  }
+
+  .content {
+    margin-bottom: 60px;
+  }
+
+  .about-photo {
+    @include span (4);
+    float: right;
+
+    img {
+      min-height: 100%;
+      border-radius: 4px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .bg-image {
+    background-size: cover;
+  }
+
+  .windley-history {
+    color: $white;
+  }
+}
+
