@@ -1,68 +1,77 @@
 <?php get_header(); ?>
 
-<?php
-if ( is_category('Civil Projects') || has_category( 'Civil Projects' )) { ?>
+<div class="hero-container">
+  <div class="hero-image" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/bg/contact.jpg);">
+    <div class="container">
+      <div class="hero-heading">
+        <h1> Projects </h1>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var imgpath = '<?php echo get_template_directory_uri(); ?>/images/background/';
-        var images = ['civil1.jpg', 'civil2.jpg', 'civil3.jpg'];
-        $('body').css({'background-image': 'url('+ imgpath + images[Math.floor(Math.random() * images.length)] + ')'});
+<div class="category-banner">
+    <div class="category-heading">
+      <div class="container">
+        <?php wp_nav_menu ( array( 'theme_location' => 'category-menu', 'container_class' => '' ) ); ?>
+      </div>
+    </div>
+</div>
 
-    });
-    </script>
-<?php
-    }else if ( is_category('Commercial Projects') || has_category( 'Commercial Projects' ) ) { ?>
-
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var imgpath = '<?php echo get_template_directory_uri(); ?>/images/background/';
-        var images = ['commercial1.jpg', 'commercial2.jpg', 'commercial3.jpg'];
-        $('body').css({'background-image': 'url('+ imgpath + images[Math.floor(Math.random() * images.length)] + ')'});
-
-    });
-    </script>
-<?php
-    }else if ( is_category('Residential Projects') || has_category( 'Residential Projects' )) { ?>
-
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var imgpath = '<?php echo get_template_directory_uri(); ?>/images/background/';
-        var images = ['residential1.jpg', 'residential2.jpg', 'residential3.jpg'];
-        $('body').css({'background-image': 'url('+ imgpath + images[Math.floor(Math.random() * images.length)] + ')'});
-
-    });
-    </script>
+<?php       if ( is_category('Civil Projects')        || has_category( 'Civil Projects' )) { ?>
+<?php }else if ( is_category('Commercial Projects')   || has_category( 'Commercial Projects' ) ) { ?>
+<?php }else if ( is_category('Residential Projects')  || has_category( 'Residential Projects' )) { ?>
 <?php } ?>
 
 
-<div id="category" class="wrapper cf fixer_wrapper">
-<h1 class="cat_header"><?php single_cat_title('',true); ?></h1>
-<?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-<div class="cat_thumb_container cf">
-    <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php
-    if(has_post_thumbnail()){
-            the_post_thumbnail(array(265,155,'class' => 'thumb_f') );
-        }
-    ?></a>
-
-<article id="content" class="setsize">
-    <h1><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-    <div class="excerpt"><?php the_excerpt(); ?></div>
-    <a href="<?php echo get_permalink(); ?>" class="read_more">More&gt;&gt;</a>
-</article>
+<div class="project-listing">
+  <div class="container">
+    <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <div <?php post_class(); ?>>  <!-- Includes the classes: .two-column-post .two-column-post-left .two-column-post-right !-->
+      <div class="media">
+        <div class="media-left"> <!-- The Project Thumbnail -->
+          <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>" class="media-left">
+            <?php
+              if(has_post_thumbnail()){
+                the_post_thumbnail(array(300,200,'class' => 'thumbnail') );
+              }
+            ?>
+          </a>
+        </div>
+        <div class="media-body"> <!-- The Project Title -->
+          <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+            <h4><?php the_title(); ?></h4>
+          </a>
+          <p><?php echo get_the_short_excerpt(); ?>...</p> <!-- The Project Excerpt -->
+          <div class="details-button-container">
+            <a href="<?php echo get_permalink(); ?>" class="details-button">
+              DETAILS
+            </a>
+            <?php
+              $key = 'website';
+              $themeta = get_post_meta($post->ID, $key, TRUE);
+              if($themeta != '') { ?>
+                <a class="website-button" href="<?php echo(get_post_meta( get_the_ID(), 'website', true ));?>">WEBSITE</a>
+              <?php
+              }
+            ?>
+          </div>
+        </div>
+      </div>
     </div>
 
-
-</div><!--generic post identification-->
-
-<?php endwhile; else: ?>
- <p>Sorry, no posts were found.</p>
-<?php endif; ?>
-
-<div class="archive_nav cf"><div class="prev"><?php previous_posts_link(); ?></div><div class="next"><?php next_posts_link(); ?></div></div>
+    <?php endwhile; else: ?>
+     <p>Sorry, no posts were found.</p>
+    <?php endif; ?>
+  </div>
+  <div class="container">
+    <div class="prev">
+      <?php previous_posts_link(); ?>
+    </div>
+    <div class="next">
+      <?php next_posts_link(); ?>
+    </div>
+   </div>
+</div>
 
 <?php get_footer(); ?>

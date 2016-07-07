@@ -1,0 +1,135 @@
+.category {
+  .hero-container {
+    height: $hero-height;
+
+    .hero-image {
+      min-height: 100%;
+      background-size: cover;
+    }
+  }
+
+  .hero-heading {
+    @include span (12);
+    margin-top: 150px;
+
+      h1 {
+        font-family: $font-body;
+        font-style: italic;
+        font-weight: 900;
+      }
+  }
+
+
+  .project-listing {
+    color: $body-color;
+
+    .two-column-post {
+      @include span (6);
+      height: auto;
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .media {
+      img {
+        @include span (6);
+        border-radius: 4px;
+        margin-right: 15px;
+      }
+
+      .media-left {
+        height: auto;
+      }
+
+      .media-body {
+        display: table-cell;
+
+        h4 {
+          font-family: $font-heading;
+          font-style: italic;
+          font-weight: 900;
+          font-size: 18px;
+          color: $tundora;
+          margin: 0;
+        }
+
+        a h4:hover {
+            color: $teak;
+        }
+
+        p {
+          line-height: 18px;
+          font-size: 14px;
+        }
+
+        .details-button-container {
+          position: absolute;
+          bottom: 0;
+        }
+
+        a.details-button, a.website-button {
+          font-family: $font-heading;
+          font-weight: 900;
+          font-size: 14px;
+          border: 1px solid;
+          border-radius: 4px;
+          padding: 6px;
+          margin-right: 15px;
+        }
+
+        a.details-button:hover {
+          color: $tundora;
+        }
+      }
+    }
+  }
+
+  .next, .prev {
+    @include span (6);
+
+    a {
+      font-family: $font-heading;
+      font-weight: 700;
+    }
+  }
+
+  .next{
+    float:right;
+    text-align: right;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .category {
+    .project-listing {
+      .media {
+        img {
+          @include span (12);
+          padding-right: 0;
+        }
+
+        .media-body {
+          h4 {
+            text-align: center;
+          }
+
+          p {
+            @include span (12);
+            padding-bottom: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .category {
+    .project-listing {
+      .two-column-post {
+        @include span (12);
+      }
+    }
+  }
+}
