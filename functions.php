@@ -1,4 +1,7 @@
 <?php
+
+require get_template_directory() . '/includes/custom-meta/_custom-meta.php';
+
     register_nav_menus(
         array(
         'topnav-left'   => 'Main Menu - Left Side',
@@ -22,5 +25,6 @@ function menu_name($location){
   $footer_nav_1 = wp_get_nav_menu_object($menu_id);
   echo $footer_nav_1->name;
 }
+
 
 ?>
