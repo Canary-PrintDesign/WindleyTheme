@@ -1,14 +1,5 @@
 <?php get_header(); ?>
-
-<div class="hero-container">
-  <div class="hero-image" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/bg/contact.jpg);">
-    <div class="container">
-      <div class="hero-heading">
-        <h1> Projects </h1>
-      </div>
-    </div>
-  </div>
-</div>
+<?php get_template_part( '/partials/hero' ); ?>
 
 <div class="category-banner">
     <div class="category-heading">

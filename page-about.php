@@ -1,17 +1,10 @@
 <?php get_header(); ?>
 
-<div class="category">
-<div class="hero-container">
-  <div class="hero-image" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/bg/contact.jpg);">
-    <div class="container">
-      <div class="hero-heading">
-        <h1> Projects </h1>
-      </div>
-    </div>
+<div class="hero">
+  <div class="container">
+    <h1><?php wp_title($sep=null) ?></h1>
   </div>
 </div>
-</div>
-
 
 <div class="about-page">
 

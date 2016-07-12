@@ -1,28 +1,3 @@
-// CARVE THIS OUT WHEN CREATING STANDARD HERO SETTINGS
-.category {
-  .hero-container {
-    height: 250px;
-
-    .hero-image {
-      min-height: 100%;
-      background-size: cover;
-    }
-  }
-
-  .hero-heading {
-    @include span (12);
-    margin-top: 150px;
-
-      h1 {
-        font-family: $font-body;
-        font-style: italic;
-        font-weight: 900;
-      }
-  }
-}
-// END CARVE
-
-
 .about-page {
   .content, .heading {
     @include span (8);
