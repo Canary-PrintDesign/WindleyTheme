@@ -31,6 +31,18 @@
         li.current-menu-item {
           background-color: $teak;
 
+          :after {
+            transition:all 0.3s;
+            top: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            position: absolute;
+            border-top-color: $teak;
+            border-width: 10px;
+            margin-left: -10px;
+          }
+
           a {
             opacity: 1;
           }
@@ -50,7 +62,7 @@
           position: relative;
         }
 
-        .menu-item-object-category:after {
+        .menu-item-object-category:hover:after {
           transition:all 0.3s;
           top: 100%;
           left: 50%;
@@ -75,6 +87,9 @@
             li {
               width: 100%;
               border-bottom: 1px solid;
+              :after {
+                display: none;
+              }
             }
             .menu-item-object-category:after {
               display: none;
