@@ -1,5 +1,6 @@
 .home {
   background-color: $tundora;
+  color: $white;
 
   .background-image {
     @include position(fixed, 0);
