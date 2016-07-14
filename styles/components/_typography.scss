@@ -21,9 +21,11 @@ h4 {
 
 a {
   color: $link-color;
+  text-decoration: none;
 
   &:hover {
     color: $link-color-active;
+    text-decoration: none;
   }
 }
 

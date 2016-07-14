@@ -1,5 +1,6 @@
 .home {
   background-color: $tundora;
+  color: $white;
 
   .background-image {
     @include position(fixed, 0);
@@ -124,6 +125,7 @@
     }
 
   .herobutton{
+    margin-bottom: $footer-top-margin;
     display: inline-block;
     border:1px solid #FFFFFF;
     color: #FFFFFF !important;
