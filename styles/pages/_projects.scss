@@ -1,24 +1,4 @@
 .category {
-  .hero-container {
-    height: $hero-height;
-
-    .hero-image {
-      min-height: 100%;
-      background-size: cover;
-    }
-  }
-
-  .hero-heading {
-    @include span (12);
-    margin-top: 150px;
-
-      h1 {
-        font-family: $font-body;
-        font-style: italic;
-        font-weight: 900;
-      }
-  }
-
 
   .project-listing {
     color: $body-color;
