@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php
-    $args = array( 'posts_per_page' => 1, 'orderby' => 'rand', 'tag' => 'frontpage' );
+    $args = array( 'post_type' => 'projects', 'posts_per_page' => 1, 'orderby' => 'rand', 'tag' => 'frontpage' );
     $myposts = get_posts( $args );
     foreach ( $myposts as $post ) : setup_postdata( $post );
     $src = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), 'full' )[0];

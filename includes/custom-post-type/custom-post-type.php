@@ -1,5 +1,34 @@
 <?php
 
+function catposttype(  $q )
+{
+    if ( $q->is_category && empty($q->query_vars['post_type'])) {
+        $q->query_vars['post_type'] = 'any';
+    }
+       if ( $q->is_tag && empty($q->query_vars['post_type'])) {
+        $q->query_vars['post_type'] = 'any';
+    }
+
+}
+add_action( 'pre_get_posts', 'catposttype' );
+
+
+
+function cat_post_type_post_class(   $classes, $class, $post_id ) {
+    if ( ($post_type = get_post_type( )) != false) {
+        $post_type_object = get_post_type_object($post_type);
+        if ( !$post_type_object->_builtin && $post_type_object->capability_type=='post' && !in_array('post', $classes)) {
+            $classes[] = 'post';
+        }
+    }
+    return $classes;
+}
+
+
+add_filter( 'post_class', 'cat_post_type_post_class', 10, 3 );
+
+
+
 // Register Custom Post Type
 function custom_post_type() {
 
@@ -34,7 +63,7 @@ function custom_post_type() {
     'label'                 => 'Project',
     'description'           => 'Individual Projects',
     'labels'                => $labels,
-    'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
+    'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', 'tag', ),
     'taxonomies'            => array( 'category', 'post_tag' ),
     'hierarchical'          => false,
     'public'                => true,
