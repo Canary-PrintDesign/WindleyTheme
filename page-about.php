@@ -1,10 +1,5 @@
-<?php get_header(); ?>
-
-<div class="hero">
-  <div class="container">
-    <h1><?php wp_title($sep=null) ?></h1>
-  </div>
-</div>
+<?php get_template_part( '/partials/header' ); ?>
+<?php get_template_part( '/partials/hero' ); ?>
 
 <div class="about-page">
 
@@ -50,5 +45,4 @@
 
 
 
-<?php get_footer(); ?>
-
+<?php get_template_part( '/partials/footer' ); ?>

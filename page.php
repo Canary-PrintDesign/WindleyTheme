@@ -1,4 +1,5 @@
-<?php get_header(); ?>
+<?php get_template_part( '/partials/header' ); ?>
+<?php get_template_part( '/partials/hero' ); ?>
 
 <?php
 if ( is_home() || is_front_page() ) { ?>
@@ -71,4 +72,4 @@ if ( is_home() || is_front_page() ) { ?>
 <?php }  ?>
 
 
-<?php get_footer(); ?>
+<?php get_template_part( '/partials/footer' ); ?>

@@ -1,12 +1,13 @@
-<?php get_header(); ?>
+<?php get_template_part( '/partials/header' ); ?>
+<?php get_template_part( '/partials/hero' ); ?>
 
 <div id="blog" class="wrapper cf fixer_wrapper">
 
 <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-         
+
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
- 
-<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php 
+
+<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php
     if(has_post_thumbnail()){
         the_post_thumbnail(array(265,155,'class' => 'thumb_f') );
     }
@@ -15,7 +16,7 @@
     <h1><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
     <?php the_excerpt(); ?>
 </article>
-    
+
 </div><!--generic post identification-->
 
 <?php endwhile; else: ?>
@@ -24,4 +25,4 @@
 
 
 
-<?php get_footer(); ?>
+<?php get_template_part( '/partials/footer' ); ?>

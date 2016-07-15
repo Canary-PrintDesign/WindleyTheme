@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_template_part( '/partials/header' ); ?>
 <?php get_template_part( '/partials/hero' ); ?>
 
 <div class="category-banner">
@@ -65,4 +65,4 @@
    </div>
 </div>
 
-<?php get_footer(); ?>
+<?php get_template_part( '/partials/footer' ); ?>

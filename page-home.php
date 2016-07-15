@@ -1,4 +1,5 @@
-<?php get_header(); ?>
+<?php get_template_part( '/partials/header' ); ?>
+
 <?php
     $args = array( 'posts_per_page' => 1, 'orderby' => 'rand', 'tag' => 'frontpage' );
     $myposts = get_posts( $args );
@@ -46,4 +47,4 @@
 endforeach;
 wp_reset_postdata();?>
 
-<?php get_footer(); ?>
+<?php get_template_part( '/partials/footer' ); ?>
