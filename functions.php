@@ -2,6 +2,7 @@
 
 require get_template_directory() . '/includes/custom-meta/_custom-meta.php';
 require get_template_directory() . '/includes/slug-in-classname/slug-in-classname.php';
+require get_template_directory() . '/includes/custom-post-type/custom-post-type.php';
 
 // Short Excerpt code for limiting characters on projects page
 function get_the_short_excerpt(){
