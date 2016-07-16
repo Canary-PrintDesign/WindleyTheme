@@ -11,8 +11,8 @@
 * Description             : NextGen Gallery Template.
 */
 
-    if (!defined ('ABSPATH')) die ('No direct access allowed'); 
-    
+    if (!defined ('ABSPATH')) die ('No direct access allowed');
+
     // Register Styles.
     wp_register_style('DOPNGTG_JScrollPaneStyle', get_template_directory_uri().'/nggallery/libraries/gui/css/jquery.jscrollpane.css');
     wp_register_style('DOPNGTG_NextGENThumbnailGalleryStyle', get_template_directory_uri().'/nggallery/assets/gui/css/jquery.dop.NextGENThumbnailGallery.css');
@@ -24,7 +24,7 @@
     // Enqueue Styles.
 //    wp_enqueue_style('DOPNGTG_JScrollPaneStyle');
 //    wp_enqueue_style('DOPNGTG_NextGENThumbnailGalleryStyle');
-   
+
     // Enqueue JavaScript.
     if (!wp_script_is('jquery', 'queue')){
         wp_enqueue_script('jquery');
@@ -32,8 +32,8 @@
 //    wp_enqueue_script('DOPNGTG_MouseWheelJS');
 //    wp_enqueue_script('DOPNGTG_JScrollPaneJS');
 //    wp_enqueue_script('DOPNGTG_NextGENThumbnailGalleryJS');
-        
-    if (!empty ($gallery)){ 
+
+    if (!empty ($gallery)){
 ?>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/nggallery/libraries/gui/css/jquery.jscrollpane.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/nggallery/assets/gui/css/jquery.dop.NextGENThumbnailGallery.css" />
@@ -161,27 +161,27 @@
         "SlideshowPauseHover": "<?php echo get_template_directory_uri()?>/nggallery/assets/gui/images/PauseHover.png", // Slideshow Pause Button Hover Image (path to image). Upload the image for slideshow's pause hover button.
         "AutoHide": "false", // Auto Hide Thumbnails and Buttons (true, false). Default: false. Hide the thumbnails and buttons and display them when you hover the gallery.
         "AutoHideTime": 2000 // Auto Hide Time (time in miliseconds). Default: 2000. Set the time after which the thumbnails and buttons hide.
-    },        
-    DOPNextGENThumbnailGalleryContent<?php echo $gallery->ID; ?> = [    
+    },
+    DOPNextGENThumbnailGalleryContent<?php echo $gallery->ID; ?> = [
 <?php
         $i = 0;
-    
+
         foreach ($images as $image):
             $i++;
             $filename = explode('.', $image->filename);
-        
+
             echo '{"Image": "'.$image->imageURL.'",'.
                   '"Thumb": "'.$image->thumbURL.'",'.
                   '"CaptionTitle": \''.($image->alttext == $filename[0] || $image->alttext == ' ' ? '':preg_replace('`\'`', "&#39;", $image->alttext)).'\','.
                   '"CaptionText": \''.($image->description == ' ' ? '':preg_replace('`\'`', "&#39;", preg_replace('`[\r\n]`', "<br />", html_entity_decode(stripslashes($image->description))))).'\','.
                   '"Media": \''.preg_replace('`[\r\n]`', "", stripslashes($image->ngg_custom_fields['Media'])).'\','.
                   '"LightboxMedia": \''.preg_replace('`[\r\n]`', "", stripslashes($image->ngg_custom_fields['LightboxMedia'])).'\'}';
-            if ($i != count($images)){        
+            if ($i != count($images)){
                 echo ','."\n";
-            }            
+            }
         endforeach;
-?>           
-    ];   
+?>
+    ];
 </script>
 <div class="DOPNextGENThumbnailGallery" id="DOPNextGENThumbnailGallery<?php echo $gallery->ID; ?>">
 <?php
