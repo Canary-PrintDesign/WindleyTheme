@@ -1,64 +1,43 @@
 <?php get_template_part( '/partials/header' ); ?>
 <?php get_template_part( '/partials/hero' ); ?>
 
-<?php
-if ( is_category('Civil Projects') || has_category( 'Civil Projects' )) { ?>
-
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var imgpath = '<?php echo get_template_directory_uri(); ?>/images/background/';
-        var images = ['civil1.jpg', 'civil2.jpg', 'civil3.jpg'];
-        $('body').css({'background-image': 'url('+ imgpath + images[Math.floor(Math.random() * images.length)] + ')'});
-
-    });
-    </script>
-<?php
-    }else if ( is_category('Commercial Projects') || has_category( 'Commercial Projects' ) ) { ?>
-
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var imgpath = '<?php echo get_template_directory_uri(); ?>/images/background/';
-        var images = ['commercial1.jpg', 'commercial2.jpg', 'commercial3.jpg'];
-        $('body').css({'background-image': 'url('+ imgpath + images[Math.floor(Math.random() * images.length)] + ')'});
-
-    });
-    </script>
-<?php
-    }else if ( is_category('Residential Projects') || has_category( 'Residential Projects' )) { ?>
-
-    <script type="text/javascript">
-    $(document).ready(function() {
-        var imgpath = '<?php echo get_template_directory_uri(); ?>/images/background/';
-        var images = ['residential1.jpg', 'residential2.jpg', 'residential3.jpg'];
-        $('body').css({'background-image': 'url('+ imgpath + images[Math.floor(Math.random() * images.length)] + ')'});
-
-    });
-    </script>
-<?php } ?>
-
-<div id="page" class="wrapper cf fixer_wrapper">
-
 <?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
+<div <?php post_class(); ?>>
 
-    <div id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <div class="category-banner">
+    <div class="category-heading">
+      <div class="container">
+        <?php wp_nav_menu ( array( 'theme_location' => 'category-menu', 'container_class' => '' ) ); ?>
+      </div>
+    </div>
+  </div>
 
-        <div class="cat_title_single"><?php
-            $category = get_the_category();
-            if($category[0]){
-            echo '<a href="'.get_category_link($category[0]->term_id ).'">'.$category[0]->cat_name.'</a>';
-            }
-        ?></div>
+<div class="container">
+  <div class="gallery">
+    <?php
+      $id = (get_post_meta( get_the_ID(), 'gallery-id', true ));
+      echo do_shortcode('[nggallery id='. $id .' template=windley]');
+    ?>
+  </div>
 
-    <article id="content" class="cf">
-        <h1 class="cf"><?php the_title(); ?></h1>
-        <?php the_content(); ?>
-    </article>
+  <div class="project-content">
+    <h1><?php the_title(); ?></h1>
+    <?php the_content(); ?>
+    <?php get_template_part( '/partials/project-meta' ); ?>
+    <!-- <span class="title">Location</span><span class="desc">Description</span> -->
 
-    </div><!--generic post identification-->
 
-<div class="prevpost"><?php next_post_link('%link', '<<', TRUE); ?></div>
-<div class="nextpost"><?php previous_post_link('%link', '>>', TRUE); ?></div>
+
+  </div>
+
+  <div class="prevpost"><?php next_post_link( '%link' ); ?></div>
+  <div class="nextpost"><?php previous_post_link( '%link' ); ?></div>
+</div>
+
+
+
+
 
 
 <?php endwhile; else: ?>
