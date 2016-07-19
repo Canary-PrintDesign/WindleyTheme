@@ -1,0 +1,61 @@
+.awards-page {
+
+  h2 {
+    font-style: italic;
+    font-weight: 900;
+    margin-top: 35px;
+  }
+
+  h3 {
+    font-weight: 900;
+    margin-bottom: 0.2em;
+    margin-top: 1.6em;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    listy-style-type: none;
+  }
+
+  li {
+    padding-top: 10px;
+    margin: 0;
+    display: block;
+  }
+
+  .industry-awards {
+    @include span (8);
+    padding-bottom: 30px;
+
+    ul {
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      .organization {
+        font-weight: 900;
+        background-color: $concrete;
+        padding: 5px 10px 5px 10px;
+        border-radius: 3px;
+      }
+
+      li {
+
+        .category {
+          font-size: 16px;
+        }
+
+        .award {
+          font-style: italic;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+
+  .leed {
+    @include span (4);
+    padding-bottom: 30px;
+  }
+}
