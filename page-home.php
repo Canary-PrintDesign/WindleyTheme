@@ -13,7 +13,7 @@
         <a class="bgfeature" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         <br>
         <span class="bgfeaturelocation">
-            <?php echo(get_post_meta( get_the_ID(), 'project_location', true )); ?>
+            <?php echo(get_post_meta( get_the_ID(), 'location', true )); ?>
         </span>
     </div>
     <div class="splashtext">
