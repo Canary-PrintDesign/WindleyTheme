@@ -17,7 +17,11 @@
   .bgfeaturebox {
     @include span (12);
     text-align: right;
-    padding-top: 25px;
+    padding-top: 60px;
+
+      p {
+        margin: 0;
+      }
 
     .bgfeature {
       font-family: $font-heading;

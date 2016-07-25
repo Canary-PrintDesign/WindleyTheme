@@ -10,11 +10,14 @@
 <div class="background-image" style="background-image: url(<?php echo $src; ?>);"></div>
 <div class="container">
     <div class="bgfeaturebox">
-        <a class="bgfeature" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-        <br>
-        <span class="bgfeaturelocation">
+        <p>
+          <a class="bgfeature" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </p>
+        <p>
+          <span class="bgfeaturelocation">
             <?php echo(get_post_meta( get_the_ID(), 'location', true )); ?>
-        </span>
+          </span>
+        </p>
     </div>
     <div class="splashtext">
         <h1>Performance & Strength</h1>
