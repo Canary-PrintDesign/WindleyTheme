@@ -9,7 +9,7 @@ function get_the_short_excerpt(){
 $excerpt = get_the_excerpt();
 $excerpt = strip_shortcodes($excerpt);
 $excerpt = strip_tags($excerpt);
-$the_str = substr($excerpt, 0, 60);
+$the_str = substr($excerpt, 0, 160);
 return $the_str;
 }
 
