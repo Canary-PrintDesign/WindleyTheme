@@ -8,11 +8,11 @@
     <div class="about-windley">
       <div class="heading">
         <h1>
-          <?php $include = get_posts('include=4399'); $content = apply_filters('the_content',$include[0]->post_title); echo $content; ?>
+          <?php $include = get_posts('include=91'); $content = apply_filters('the_content',$include[0]->post_title); echo $content; ?>
         </h1>
       </div>
       <div class="content">
-        <?php $include = get_posts('include=4399'); $content = apply_filters('the_content',$include[0]->post_content); echo $content; ?>
+        <?php $include = get_posts('include=91'); $content = apply_filters('the_content',$include[0]->post_content); echo $content; ?>
       </div>
       <div class="about-photo">
         <?php
@@ -29,11 +29,11 @@
         <div class="windley-history">
           <div class="heading">
             <h1>
-              <?php $include = get_posts('include=4402'); $content = apply_filters('the_content',$include[0]->post_title); echo $content; ?>
+              <?php $include = get_posts('include=89'); $content = apply_filters('the_content',$include[0]->post_title); echo $content; ?>
             </h1>
           </div>
           <div class="content">
-            <?php $include = get_posts('include=4402'); $content = apply_filters('the_content',$include[0]->post_content); echo $content; ?>
+            <?php $include = get_posts('include=89'); $content = apply_filters('the_content',$include[0]->post_content); echo $content; ?>
           </div>
         </div>
       </div>
