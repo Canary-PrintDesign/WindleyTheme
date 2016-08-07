@@ -1,6 +1,7 @@
 <?php
 
 require get_template_directory() . '/includes/custom-meta/_custom-meta.php';
+require get_template_directory() . '/includes/_enqueue_scripts.php';
 require get_template_directory() . '/includes/slug-in-classname/slug-in-classname.php';
 require get_template_directory() . '/includes/custom-post-type/custom-post-type.php';
 
@@ -62,6 +63,7 @@ function menu_name($location){
   $footer_nav_1 = wp_get_nav_menu_object($menu_id);
   echo $footer_nav_1->name;
 }
+
 
 
 ?>
