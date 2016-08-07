@@ -1,0 +1,119 @@
+@media (min-width: $container-width) {
+  .project-photos,
+  .project-content {
+    @include span(6);
+  }
+}
+
+.project-photos {
+  .gallery-carousel img {
+    cursor: zoom-in;
+  }
+
+  .flickity-prev-next-button {
+    height: 100%;
+    padding: 0;
+    border-radius: 0;
+
+    &.previous {
+      left: 0;
+    }
+
+    &.next {
+      right: 0;
+    }
+  }
+}
+
+.single {
+  .category-banner {
+    .category-heading {
+      line-height: 50px;
+      a {
+        height: 50px;
+      }
+    }
+  }
+}
+
+.single {
+  .category-civil-projects {
+    li.civil-nav, {
+      a {
+        opacity: 1;
+        background-color: $teak;
+      }
+    }
+  }
+  .category-commercial-projects {
+    li.commercial-nav {
+      a {
+        opacity: 1;
+        background-color: $teak;
+      }
+    }
+  }
+  .category-residential-projects {
+    li.residential-nav {
+      a {
+        opacity: 1;
+        background-color: $teak;
+      }
+    }
+  }
+}
+.category-heading ul .menu-item-object-category:hover:after {
+  display: none;
+}
+
+.single {
+  .project-content {
+    .title {
+      @include span (3);
+      margin-right: 0;
+      background-color: $mercury;
+      border-radius: 4px 0px 0px 4px;
+    }
+
+    .desc {
+      @include span (7);
+      margin-left: 0;
+      background-color: $concrete;
+      border-radius: 0px 4px 4px 0px;
+    }
+
+    .title, .desc {
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+
+// Forward and Back buttons - to be styled properly still
+
+.prevpost{
+    float:left;
+    margin-left:3%;
+}
+
+.nextpost{
+    float:right;
+    margin-right:3%;
+}
+
+.prevpost a, .nextpost a{
+    display:block;
+    padding:10px;
+    line-height:1em;
+    color:#f4c361;
+    background:rgba(0,0,0,0.6);
+    border-radius:50%;
+}
+
+.prevpost a:hover, .nextpost a:hover,.prevpost a:active, .nextpost a:active,.prevpost a:focus, .nextpost a:focus{
+    text-decoration:none;
+    background:rgba(0,0,0,0.8);
+    color:#fff;
+}

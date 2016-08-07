@@ -44,13 +44,13 @@
     var DOPNextGENThumbnailGallerySettings<?php echo $gallery->ID;?> = {
         "Width": 900, // Width (value in pixels). Default value: 900. Set the width of the gallery.
         "Height": 600, // Height (value in pixels). Default value: 600. Set the height of the gallery.
-        "BgColor": "000000", // Background Color (color hex code). Default value: f1f1f1. Set gallery backgrund color.
+        "BgColor": "f1f1f1", // Background Color (color hex code). Default value: f1f1f1. Set gallery backgrund color.
         "BgAlpha": 100, // Background Alpha (value from 0 to 100). Default value: 100. Set gallery alpha.
         "ImagesOrder": "normal", // Images Order (normal, random). Default value: normal. Set images order.
         "ResponsiveEnabled": "true", // Responsive Enabled (true, false). Default value: true. Enable responsive layout.
         "ThumbnailsPosition": "bottom", // Thumbnails Position (top, right, bottom, left). Default value: bottom. Set the position of the thumbnails in the gallery.
         "ThumbnailsOverImage": "false", // Thumbnails Over Image (true, false). Default value: false. If the value is true the thumbnails will be displayed over the big image.
-        "ThumbnailsBgColor": "000000", // Thumbnails Background Color (color hex code). Default value: f1f1f1. Set the color for the thumbnails background.
+        "ThumbnailsBgColor": "f1f1f1", // Thumbnails Background Color (color hex code). Default value: f1f1f1. Set the color for the thumbnails background.
         "ThumbnailsBgAlpha": 100, // Thumbnails Background Alpha (value from 0 to 100). Default value: 100. Set the transparency for the thumbnails background.
         "ThumbnailsSpacing": 5, // Thumbnails Background Alpha (value from 0 to 100). Default value: 100. Set the transparency for the thumbnails background.
         "ThumbnailsPaddingTop": 0, // Thumbnails Padding Top (value in pixels). Default value: 0. Set the top padding for the thumbnails.
@@ -67,14 +67,14 @@
         "ThumbnailHeight": 60, // Thumbnail Height (the size in pixels). Default value: 60. Set the height of a thumbnail.
         "ThumbnailWidthMobile": 60, // Mobile Thumbnail Width (the size in pixels). Default value: 60. Set the width of a thumbnail on mobile devices.
         "ThumbnailHeightMobile": 60, // Mobile Thumbnail Height (the size in pixels). Default value: 60. Set the height of a thumbnail on mobile devices.
-        "ThumbnailAlpha": 80, // Thumbnail Alpha (value from 0 to 100). Default value: 50. Set the transparency of a thumbnail.
+        "ThumbnailAlpha": 50, // Thumbnail Alpha (value from 0 to 100). Default value: 50. Set the transparency of a thumbnail.
         "ThumbnailAlphaHover": 100, // Thumbnail Alpha Hover (value from 0 to 100). Default value: 100. Set the transparency of a thumbnail when hover.
         "ThumbnailAlphaSelected": 100, // Thumbnail Alpha Selected (value from 0 to 100). Default value: 100. Set the transparency of a thumbnail when selected.
-        "ThumbnailBgColor": "000000", // Thumbnail Background Color (color hex code). Default value: f1f1f1. Set the color of a thumbnail's background.
+        "ThumbnailBgColor": "f1f1f1", // Thumbnail Background Color (color hex code). Default value: f1f1f1. Set the color of a thumbnail's background.
         "ThumbnailBgColorHover": "000000", // Thumbnail Background Color Hover (color hex code). Default value: 000000. Set the color of a thumbnail's background when hover.
         "ThumbnailBgColorSelected": "000000", // Thumbnail Background Color Selected (color hex code). Default value: 000000. Set the color of a thumbnail's background when selected.
-        "ThumbnailBorderSize": 1, // Thumbnail Border Size (value in pixels). Default value: 2. Set the size of a thumbnail's border.
-        "ThumbnailBorderColor": "000000", // Thumbnail Border Color (color hex code). Default value: f1f1f1. Set the color of a thumbnail's border.
+        "ThumbnailBorderSize": 2, // Thumbnail Border Size (value in pixels). Default value: 2. Set the size of a thumbnail's border.
+        "ThumbnailBorderColor": "f1f1f1", // Thumbnail Border Color (color hex code). Default value: f1f1f1. Set the color of a thumbnail's border.
         "ThumbnailBorderColorHover": "000000", // Thumbnail Border Color Hover (color hex code). Default value: 000000. Set the color of a thumbnail's border when hover.
         "ThumbnailBorderColorSelected": "000000", // Thumbnail Border Color Selected (color hex code). Default value: 000000. Set the color of a thumbnail's border when selected.
         "ThumbnailPaddingTop": 0, // Thumbnail Padding Top (value in pixels). Default value: 0. Set top padding value of a thumbnail.
@@ -90,10 +90,10 @@
         "ImageMarginRight": 20, // Image Margin Right (value in pixels). Default value: 20. Set right margin value for the image.
         "ImageMarginBottom": 20, // Image Margin Bottom (value in pixels). Default value: 20. Set bottom margin value for the image.
         "ImageMarginLeft": 20, // Image Margin Left (value in pixels). Default value: 20. Set top left value for the image.
-        "ImagePaddingTop": 1, // Image Padding Top (value in pixels). Default value: 5. Set top padding value for the image.
-        "ImagePaddingRight": 1, // Image Padding Right (value in pixels). Default value: 5. Set right padding value for the image.
-        "ImagePaddingBottom": 1, // Image Padding Bottom (value in pixels). Default value: 5. Set bottom padding value for the image.
-        "ImagePaddingLeft": 1, // Image Padding Left (value in pixels). Default value: 5. Set left padding value for the image.
+        "ImagePaddingTop": 5, // Image Padding Top (value in pixels). Default value: 5. Set top padding value for the image.
+        "ImagePaddingRight": 5, // Image Padding Right (value in pixels). Default value: 5. Set right padding value for the image.
+        "ImagePaddingBottom": 5, // Image Padding Bottom (value in pixels). Default value: 5. Set bottom padding value for the image.
+        "ImagePaddingLeft": 5, // Image Padding Left (value in pixels). Default value: 5. Set left padding value for the image.
         "NavigationEnabled": "true", // Enable Navigation (true, false). Default value: true. Enable navigation buttons.
         "NavigationOverImage": "true", // Navigation Over Image (true, false). Default value: true. Show navigation buttons over or outside the image.
         "NavigationPrev": "<?php echo get_template_directory_uri()?>/nggallery/assets/gui/images/Prev.png", // Navigation Previous Button Image (path to image). Upload the image for navigation's previous button.
@@ -105,14 +105,14 @@
         "NavigationTouchDeviceSwipeEnabled": "true", // Swipe Navigation Enabled (true, false). Default value: true. Enable swipe navigation on touch devices.
         "CaptionWidth": 900, // Caption Width (value in pixels). Default value: 900. Set caption width.
         "CaptionHeight": 70, // Caption Height (value in pixels). Default value: 75. Set caption height.
-        "CaptionTitleColor": "ffffff", // Caption Title Color (color hex code). Default value: 000000. Set caption title color.
-        "CaptionTextColor": "ffffff", // Caption Text Color (color hex code). Default value: 000000. Set caption text color.
-        "CaptionBgColor": "000000", // Caption Background Color (color hex code). Default value: ffffff. Set caption background color.
+        "CaptionTitleColor": "000000", // Caption Title Color (color hex code). Default value: 000000. Set caption title color.
+        "CaptionTextColor": "000000", // Caption Text Color (color hex code). Default value: 000000. Set caption text color.
+        "CaptionBgColor": "ffffff", // Caption Background Color (color hex code). Default value: ffffff. Set caption background color.
         "CaptionBgAlpha": 50, // Caption Background Alpha (value from 0 to 100). Default value: 50. Set caption alpha color.
         "CaptionPosition": "bottom", // Caption Position (top, right, bottom, left, top-left, top-right, bottom-left, bottom-right). Default value: bottom. Set caption position.
         "CaptionOverImage": "true", // Caption Over Image (true, false). Default value: true. Display caption over image, or not.
-        "CaptionScrollScrubColor": "000000", // Caption Scroll Scrub Color (color hex code). Default value: 777777. Set scroll scrub color.
-        "CaptionScrollBgColor": "000000", // Caption Scroll Background Color (color hex code). Default value: e0e0e0. Set scroll background color.
+        "CaptionScrollScrubColor": "777777", // Caption Scroll Scrub Color (color hex code). Default value: 777777. Set scroll scrub color.
+        "CaptionScrollBgColor": "e0e0e0", // Caption Scroll Background Color (color hex code). Default value: e0e0e0. Set scroll background color.
         "CaptionMarginTop": 0, // Caption Margin Top (value in pixels). Default value: 0. Set caption top margin.
         "CaptionMarginRight": 0, // Caption Margin Right (value in pixels). Default value: 0. Set caption right margin.
         "CaptionMarginBottom": 0, // Caption Margin Bottom (value in pixels). Default value: 0. Set caption bottom margin.
@@ -142,7 +142,7 @@
         "LightboxNavigationClose": "<?php echo get_template_directory_uri()?>/nggallery/assets/gui/images/LightboxClose.png", // Lightbox Navigation Close Button Image (path to image). Upload the image for lightbox navigation's close button.
         "LightboxNavigationCloseHover": "<?php echo get_template_directory_uri()?>/nggallery/assets/gui/images/LightboxCloseHover.png", // Lightbox Navigation Close Button Hover Image (path to image). Upload the image for lightbox navigation's close hover button.
         "LightboxNavigationInfoBgColor": "000000", // Lightbox Navigation Info Background Color (color hex code). Default value: 000000. Set the color for the lightbox info background.
-        "LightboxNavigationInfoTextColor": "ffffff", // Lightbox Navigation Info Text Color (color hex code). Default value: dddddd. Set the color for the lightbox info text.
+        "LightboxNavigationInfoTextColor": "dddddd", // Lightbox Navigation Info Text Color (color hex code). Default value: dddddd. Set the color for the lightbox info text.
         "LightboxNavigationTouchDeviceSwipeEnabled": "true", // Swipe Lightbox Navigation Enabled (true, false). Default value: true. Enable swipe lightbox navigation on touch devices.
         "SocialShareEnabled": "false", // Social Share Enabled (true, false). Default value: true. Enable AddThis Social Share.
         "SocialShare": "", // Social Share Button Image (path to image). Upload the image for social share button.

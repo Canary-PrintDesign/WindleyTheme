@@ -29,6 +29,10 @@ function prfx_meta_callback( $post ) {
     ?>
 
     <p>
+        <label for="gallery-id" class="prfx-row-title"><?php _e( 'Gallery ID #:', 'prfx-textdomain' )?></label>
+        <input type="text" name="gallery-id" id="meta-text" value="<?php if ( isset ( $prfx_stored_meta['gallery-id'] ) ) echo $prfx_stored_meta['gallery-id'][0]; ?>" />
+    </p>
+    <p>
         <label for="client-name" class="prfx-row-title"><?php _e( 'Client Name:', 'prfx-textdomain' )?></label>
         <input type="text" name="client-name" id="meta-text" value="<?php if ( isset ( $prfx_stored_meta['client-name'] ) ) echo $prfx_stored_meta['client-name'][0]; ?>" />
     </p>
@@ -48,7 +52,6 @@ function prfx_meta_callback( $post ) {
         <label for="consultant1" class="prfx-row-title"><?php _e( 'Consultant 1:', 'prfx-textdomain' )?></label>
         <input type="text" name="consultant1" id="meta-text" value="<?php if ( isset ( $prfx_stored_meta['consultant1'] ) ) echo $prfx_stored_meta['consultant1'][0]; ?>" />
     </p>
-
     <p>
         <label for="consultant2" class="prfx-row-title"><?php _e( 'Consultant 2:', 'prfx-textdomain' )?></label>
         <input type="text" name="consultant2" id="meta-text" value="<?php if ( isset ( $prfx_stored_meta['consultant2'] ) ) echo $prfx_stored_meta['consultant2'][0]; ?>" />
@@ -112,6 +115,9 @@ function prfx_meta_save( $post_id ) {
     }
     if( isset( $_POST[ 'consultant5' ] ) ) {
         update_post_meta( $post_id, 'consultant5', sanitize_text_field( $_POST[ 'consultant5' ] ) );
+    }
+    if( isset( $_POST[ 'gallery-id' ] ) ) {
+        update_post_meta( $post_id, 'gallery-id', sanitize_text_field( $_POST[ 'gallery-id' ] ) );
     }
 }
 add_action( 'save_post', 'prfx_meta_save' );
