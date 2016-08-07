@@ -30,7 +30,7 @@ add_action( 'wp_enqueue_scripts', 'single_project_scripts_method' );
 
 <div class="container">
   <div class="project-photos">
-    <?php echo do_shortcode('[nggallery id='. $gallery_id .' template=flickity]') ?>
+    <?php echo do_shortcode('[nggallery id='. $gallery_id .' template=flickity-with-thumbs]') ?>
   </div>
 
   <div class="project-content">
