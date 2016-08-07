@@ -6,6 +6,10 @@
 }
 
 .project-photos {
+  .gallery-carousel img {
+    cursor: zoom-in;
+  }
+
   .flickity-prev-next-button {
     height: 100%;
     padding: 0;

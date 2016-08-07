@@ -43,6 +43,10 @@ add_action( 'wp_enqueue_scripts', 'single_project_scripts_method' );
   <div class="nextpost"><?php previous_post_link( '%link' ); ?></div>
 </div>
 
+<div class="modal">
+  <?php echo do_shortcode('[nggallery id='. $gallery_id .' template=flickity]') ?>
+</div>
+
 <?php endwhile; else: ?>
  <p>Sorry, no posts were found.</p>
 <?php endif; ?>
