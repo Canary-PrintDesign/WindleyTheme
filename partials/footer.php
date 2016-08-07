@@ -46,7 +46,6 @@
   </div>
 </footer>
 
-<script src="<?php echo get_stylesheet_directory_uri();?>/build/js/app.js"></script>
 <?php wp_footer() ?>
 </body>
 </html>
