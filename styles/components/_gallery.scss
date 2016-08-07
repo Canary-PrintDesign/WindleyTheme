@@ -1,0 +1,29 @@
+$gallery-gutter: gutter();
+
+.gallery {
+  .flickity-enabled {
+    .gallery-cell {
+      top: 50%;
+      @include transform(translateY(-50%));
+    }
+  }
+
+  .flickity-prev-next-button {
+    background: $gallery-nav-bg;
+
+    &:not(:hover) {
+      opacity: 0.3;
+    }
+
+    svg {
+      @include position(absolute, 50% auto auto 50%);
+      @include transform(translate(-50%, -50%));
+      width: 50%;
+      height: auto;
+
+      .arrow {
+        fill: $gallery-nav-color;
+      }
+    }
+  }
+}

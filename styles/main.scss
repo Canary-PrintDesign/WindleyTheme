@@ -3,6 +3,7 @@
 
 @import "normalize";
 @include normalize();
+@import "vendor/flickity";
 
 @import "bourbon";
 @import "susy";
@@ -11,6 +12,7 @@
 @import "mixins/heading_style";
 
 @import "components/typography";
+@import "components/gallery";
 @import "components/lists";
 @import "components/hero";
 @import "components/social_links";

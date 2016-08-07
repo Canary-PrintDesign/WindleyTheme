@@ -1,3 +1,26 @@
+@media (min-width: $container-width) {
+  .project-photos,
+  .project-content {
+    @include span(6);
+  }
+}
+
+.project-photos {
+  .flickity-prev-next-button {
+    height: 100%;
+    padding: 0;
+    border-radius: 0;
+
+    &.previous {
+      left: 0;
+    }
+
+    &.next {
+      right: 0;
+    }
+  }
+}
+
 .single {
   .category-banner {
     .category-heading {
@@ -40,13 +63,7 @@
 }
 
 .single {
-  .gallery {
-    @include span (6);
-  }
-
   .project-content {
-    @include span (6);
-
     .title {
       @include span (3);
       margin-right: 0;
