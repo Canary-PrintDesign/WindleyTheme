@@ -6,6 +6,8 @@
 }
 
 .project-photos {
+  padding-bottom: 50px;
+
   .gallery-carousel img {
     cursor: zoom-in;
   }
@@ -70,6 +72,7 @@
   .project-content {
     .title {
       @include span (3);
+      margin-left: 0;
       margin-right: 0;
       background-color: $mercury;
       border-radius: 4px 0px 0px 4px;
@@ -91,29 +94,37 @@
 
 
 
-// Forward and Back buttons - to be styled properly still
+// Forward and Back buttons
 
-.prevpost{
-    float:left;
-    margin-left:3%;
+.prevpost, .nextpost {
+  @include span (6);
+  padding-bottom: 50px;
+  margin-left: 0;
+  margin-right: 0;
+
+  i {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+.prevpost {
+  float:left;
 }
 
 .nextpost{
-    float:right;
-    margin-right:3%;
+  float:right;
+  text-align:right;
 }
 
-.prevpost a, .nextpost a{
-    display:block;
-    padding:10px;
-    line-height:1em;
-    color:#f4c361;
-    background:rgba(0,0,0,0.6);
-    border-radius:50%;
+.prevpost a, .nextpost a {
+  line-height: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color:$dusty-gray;
 }
 
-.prevpost a:hover, .nextpost a:hover,.prevpost a:active, .nextpost a:active,.prevpost a:focus, .nextpost a:focus{
-    text-decoration:none;
-    background:rgba(0,0,0,0.8);
-    color:#fff;
+.prevpost a:hover, .nextpost a:hover,.prevpost a:focus, .nextpost a:focus{
+  text-decoration:none;
+  color: $regal-blue;
 }
