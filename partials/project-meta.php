@@ -23,6 +23,17 @@
   }
 ?>
 <?php
+  $key = 'website';
+  $themeta = get_post_meta($post->ID, $key, TRUE);
+  if($themeta != '') { ?>
+    <span class="title">Website:</span>
+    <a href="http://<?php echo(get_post_meta( get_the_ID(), 'website', true ));?>">
+      <span class="desc"><?php echo(get_post_meta( get_the_ID(), 'website', true ));?></span>
+    </a>
+  <?php
+  }
+?>
+<?php
   $key = 'consultant1';
   $themeta = get_post_meta($post->ID, $key, TRUE);
   if($themeta != '') { ?>
