@@ -13,16 +13,18 @@
   }
 
   $community_links = array(
+    new Link('Nanaimo Diamonds', 'http://nanaimodiamonds.com/'),
     new Link('Habitat for Humanity', 'http://www.habitatmvi.org/'),
-    new Link('Haven House'),
-    new Link('HCFC Soccer for Kids'),
-    new Link('Loaves & Fishes Food Bank'),
-    new Link('Make a Wish Foundation'),
-    new Link('Nanaimo Minor Hockey Association'),
-    new Link('Nanaimo Open Squash Tournament'),
-    new Link('Nanaimo Timbermen Senior A Lacrosse'),
-    new Link('Nanaimo Winter Wonderland Skate'),
-    new Link('VIU Apprenticeship Training Program'),
+    new Link('Haven House', 'http://www.havensociety.com/'),
+    new Link('HCFC Soccer for Kids', 'http://harbourcityfc.com/'),
+    new Link('Loaves & Fishes Food Bank', 'http://www.nanaimoloavesandfishes.org/'),
+    new Link('Make a Wish Foundation', 'https://makeawishbc.ca/'),
+    new Link('Nanaimo Minor Hockey Association', 'http://hockeynanaimo.com/'),
+    new Link('Nanaimo Open Squash Tournament', 'http://www.nanaimosquashclub.com/'),
+    new Link('Nanaimo Timbermen Senior A Lacrosse', 'http://www.tmen.ca/'),
+    new Link('Nanaimo Winter Wonderland Skate', 'http://www.nanaimo.ca/schedules/parks-recreation-culture/'),
+    new Link('VIU Apprenticeship Training Program', 'https://www2.viu.ca/apprenticeship/index.asp'),
+    new Link('Young Profesionals of Nanaimo', 'http://www.ypnanaimo.com/'),
   );
 ?>
 
