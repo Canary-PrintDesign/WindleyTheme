@@ -1,0 +1,110 @@
+.community-page {
+  .content, .heading {
+    @include span (8);
+
+    h1 {
+      font-family: $font-heading;
+      font-size: 21px;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-style: italic;
+      margin-top: 60px;
+    }
+  }
+
+  .content {
+    margin-bottom: $footer-top-margin / 2;
+    margin-top: $footer-top-margin / 2;
+  }
+
+  .community-photo {
+    @include span (4);
+    float: right;
+    margin-bottom: $footer-top-margin / 2;
+    margin-top: $footer-top-margin / 2;
+
+    img {
+      min-height: 100%;
+      border-radius: 4px;
+      -webkit-margin-before: 1em;
+      -webkit-margin-after: 1em;
+    }
+  }
+
+  .bg-color {
+    background-color: $tundora;
+    height: auto;
+    color: $white;
+
+    .container {
+      padding-bottom: 30px;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 24px;
+    text-align: center;
+    padding: 65px 0 65px 0;
+  }
+
+  .community-links {
+    // @include display(flex);
+    // @include flex-wrap(wrap);
+    // @include justify-content(center);
+    -webkit-padding-start: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    list-style: none;
+
+
+  }
+
+  .community-link {
+    @include span (2);
+    display: table;
+    position: relative;
+    height: 100px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    background-color: $white;
+    transition: .3s;
+
+    &:hover {
+      background-color: $dusty-gray;
+    }
+
+    &:not(:hover) {
+      a {
+        display: none;
+        transition: .3s;
+      }
+    }
+
+    &-title {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      color: $tundora;
+      font-weight: 900;
+      padding: 3px;
+    }
+
+    a {
+      @include position(absolute, 0);
+      @include display(flex);
+      @include justify-content(center);
+      @include align-items(center);
+      cursor: pointer;
+      color: $tundora;
+    }
+
+    &-caption {
+      padding: 10px;
+      background-color: $white;
+      border-radius: 3px;
+    }
+  }
+}
