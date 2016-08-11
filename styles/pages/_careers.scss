@@ -1,0 +1,20 @@
+.page-careers {
+  background-color: $white;
+
+  .main-content {
+
+    .page-content {
+      @include span (6);
+      margin-top: 10px;
+    }
+
+    .contact-form {
+      @include span (6);
+    }
+  }
+
+
+
+
+
+}
