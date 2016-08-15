@@ -24,7 +24,7 @@
         <h2>Since 1949</h2>
     </div>
     <div class="ctabuttonwrapper">
-        <a href="#" class="ctabutton">View Our Projects</a>
+        <a href="#" class="btn btn-primary">View Our Projects</a>
     </div>
 
     <div class="heroboxes">

@@ -28,7 +28,7 @@ if ( is_home() || is_front_page() ) { ?>
         <h2>Let us build for you or something.</h2>
     </div>
     <div class="ctaButtonWrapper">
-        <a href="#" class="ctaButton">View Our Projects</a>
+        <a href="#" class="btn btn-primary">View Our Projects</a>
     </div>
 
     <div class="heroboxes">
