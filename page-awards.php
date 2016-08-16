@@ -5,7 +5,7 @@
 <div class="container">
   <div class="awards-page">
     <div class="industry-awards">
-      <h2>Industry Awards</h2>
+      <h2>Industry Recognition</h2>
 
       <h3>2015</h3>
       <ul><span class="organization">VIREB</span>
@@ -84,44 +84,6 @@
         <li>
           <span class="category">Multi-Purpose Building Award</span> | <span class="award">Award of Merit</span><br>
           <a href="#">1650 Terminal Avenue</a>
-        </li>
-      </ul>
-
-      <h3>2009</h3>
-      <ul><span class="organization">VIREB</span>
-        <li>
-          <span class="category">Commercial Building Award</span> | <span class="award">Award of Excellence</span><br>
-          <a href="#">Wallace Street Project</a>
-        </li>
-      </ul>
-
-      <h3>2008</h3>
-      <ul><span class="organization">VIREB</span>
-        <li>
-          <span class="category">Commercial Building Award</span> | <span class="award">Award of Merit</span><br>
-          <a href="#">VI Fitness</a>
-        </li>
-      </ul>
-      <ul><span class="organization">City of Nanaimo</span>
-        <li>
-          <span class="category">Commercial</span> | <span class="award">Design Award</span><br>
-          <a href="#">Wallace Street Project</a>
-        </li>
-      </ul>
-
-      <h3>2004</h3>
-      <ul><span class="organization">City of Nanaimo</span>
-        <li>
-          <span class="category">Commercial</span> | <span class="award">Design Award</span><br>
-          <a href="#">Herold Engineering & Windley Contracting Buildings - Shenton Road</a>
-        </li>
-      </ul>
-
-      <h3>2003</h3>
-      <ul><span class="organization">City of Nanaimo</span>
-        <li>
-          <span class="category">Multi-Family</span> | <span class="award">Honourable Mention</span><br>
-          <a href="#">6140 McGirr Road</a>
         </li>
       </ul>
     </div>
