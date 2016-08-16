@@ -1,20 +1,33 @@
 .page-careers {
   background-color: $white;
 
-  .main-content {
 
-    .page-content {
-      @include span (6);
-      margin-top: 10px;
-    }
+  .content {
+    @include span (8);
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 
-    .contact-form {
-      @include span (6);
+  .careers-photo {
+    @include span (4);
+    float: right;
+
+    img {
+      min-height: 100%;
+      border-radius: 4px;
+      margin: 2em 0;
     }
   }
 
+  .bg-image {
+      background-size: cover;
+      background-position: center right;
+    }
 
-
-
-
+  .contact-form {
+    @include span (6);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: $white;
+  }
 }
