@@ -33,7 +33,7 @@
           <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
             <h4><?php the_title(); ?></h4>
           </a>
-          <p><?php echo get_the_short_excerpt(); ?>...</p> <!-- The Project Excerpt -->
+          <p><?php echo get_the_short_excerpt(); ?></p> <!-- The Project Excerpt -->
           <div class="details-button-container">
             <a href="<?php echo get_permalink(); ?>" class="details-button">
               DETAILS

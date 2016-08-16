@@ -11,7 +11,7 @@ function get_the_short_excerpt(){
 $excerpt = get_the_excerpt();
 $excerpt = strip_shortcodes($excerpt);
 $excerpt = strip_tags($excerpt);
-$the_str = substr($excerpt, 0, 160);
+$the_str = substr($excerpt, 0, 141);
 return $the_str;
 }
 
@@ -43,18 +43,6 @@ return $classes;
         'footer-menu-2' => 'Footer Menu 2'
         )
     );
-
-
-// Add different thumbnail size.  **To be removed**
-add_theme_support("post-thumbnails");
-add_image_size( 'largest_thumb', 860, 424, false );
-
-
-// Custom Excerpt length.  **To be modified**
-function custom_excerpt_length($length){
-    return 50;//words
-}
-add_filter('excerpt_length','custom_excerpt_length',9999);
 
 
 // Add site-map to footer - Sinetheta
