@@ -7,6 +7,10 @@ $topnav-offset: $topnav-height - $topnav-menu-outerheight;
 
 .topnav-spacer {
   height: $topnav-height;
+
+  @media (max-width: 960px) {
+    height: 73px;
+  }
 }
 
 .topnav {
