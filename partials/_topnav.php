@@ -4,7 +4,7 @@
     <div class="nav-wrapper">
       <?php wp_nav_menu ( array( 'theme_location' => 'topnav-left', 'container_class' => 'topnav-left-container' ) ); ?>
       <div class="logo-wrapper">
-        <a href="<?php echo home_url(); ?>" title="Windley Contracting - Home" class="nav-logo logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Windley Contracting logo"></a>
+        <a href="<?php echo home_url(); ?>" title="Windley Contracting - Home" class="nav-logo logo"></a>
       </div>
       <?php wp_nav_menu ( array( 'theme_location' => 'topnav-right', 'container_class' => 'topnav-right-container' ) ); ?>
     </div>
