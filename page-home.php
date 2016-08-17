@@ -24,24 +24,24 @@
         <h2>Since 1949</h2>
     </div>
     <div class="ctabuttonwrapper">
-        <a href="#" class="btn btn-primary">View Our Projects</a>
+        <a href="./commercial" class="btn btn-primary">View Our Projects</a>
     </div>
 
     <div class="heroboxes">
         <div class="herobox hb1">
-            <h1>Upcoming Sales</h1>
+            <h1>Currently <br>Selling</h1>
             <p>We are a widely diverse development and general contracting company based on Vancouver Island and serving all of BC and Alberta in the civil, commercial, and residential sectors. </p>
-            <a href="#" class="herobutton">LEARN MORE</a>
+            <a href="./sales" class="herobutton">LEARN MORE</a>
         </div>
         <div class="herobox hb2">
-            <h1>Community Involvement</h1>
-            <p>We pride ourselves in having had the privilege to support many local charities and events throughout Nanaimo and the surrounding area</p>
-            <a href="#" class="herobutton">LEARN MORE</a>
+            <h1>Community <br>Involvement</h1>
+            <p>We are humbled to have had the opportunity to work with so many local charities, organizations,  and events throughout Nanaimo and the surrounding area.</p>
+            <a href="./community" class="herobutton">LEARN MORE</a>
         </div>
         <div class="herobox hb3">
-            <h1>Industry Recognition</h1>
-            <p>People LOVE our things.  LEED?  Other buzzwords?  YES!</p>
-            <a href="#" class="herobutton">LEARN MORE</a>
+            <h1>Industry <br>Recognition</h1>
+            <p>Windley has had the privilege of working on some incredible projects with great clients.  Check out some of the awards we've had the honor of being involved with.</p>
+            <a href="./awards" class="herobutton">LEARN MORE</a>
         </div>
     </div>
 </div>
