@@ -168,5 +168,6 @@ body.past-scroll-top .topnav {
   to {
     height: 2 * $topnav-menu-outerheight;
     width: 2 * $topnav-menu-outerheight * $topnav-logo-width / $topnav-logo-height;
+    background-image: url(../../images/logo-small.png);
   }
 }
