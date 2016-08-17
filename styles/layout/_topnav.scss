@@ -74,7 +74,7 @@ $topnav-logo-width: 303px;
     @include position(absolute, $topnav-height null null 50%);
     height: $topnav-logo-height;
     width: $topnav-logo-width;
-    background: url(../../images/logo.png) 100% / cover;
+    background: url(../../images/logo.png), url(../../images/logo-small.png) 100% / cover;
   }
 
   .menu {
