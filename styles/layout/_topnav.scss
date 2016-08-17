@@ -5,6 +5,10 @@ $topnav-menu-padding: 16px;
 $topnav-menu-outerheight: $topnav-menu-height + 2 * $topnav-menu-padding;
 $topnav-offset: $topnav-height - $topnav-menu-outerheight;
 
+$topnav-logo-height: 140px;
+$topnav-logo-width: 303px;
+
+
 .topnav-spacer {
   height: $topnav-height;
 
@@ -68,12 +72,9 @@ $topnav-offset: $topnav-height - $topnav-menu-outerheight;
   .nav-logo {
     @include transform(translate(-50%, -50%));
     @include position(absolute, $topnav-height null null 50%);
-
-    img {
-      max-width: none;
-      height: 140px;
-      transition: height 250ms;
-    }
+    height: $topnav-logo-height;
+    width: $topnav-logo-width;
+    background: url(../../images/logo.png), url(../../images/logo-small.png) 100% / cover;
   }
 
   .menu {
@@ -149,12 +150,24 @@ body.past-scroll-top .topnav {
   top: -$topnav-offset;
   transition: top 250ms;
 
-  .nav-logo img {
-    height: 2 * $topnav-menu-outerheight;
+  .nav-logo {
+    @include animation(smallLogo 250ms forwards);
   }
 
   .social-links {
     opacity: 0; // in case we don't quite get them off page
     transition: opacity 250ms 250ms;
+  }
+}
+
+@include keyframes(smallLogo) {
+  from {
+    height: 140px;
+  }
+
+  to {
+    height: 2 * $topnav-menu-outerheight;
+    width: 2 * $topnav-menu-outerheight * $topnav-logo-width / $topnav-logo-height;
+    background-image: url(../../images/logo-small.png);
   }
 }
