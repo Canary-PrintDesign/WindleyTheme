@@ -70,6 +70,20 @@
 
 .single {
   .project-content {
+
+    h1 {
+      line-height: 1em;
+    }
+
+    .website {
+      padding-bottom: 1em;
+    }
+
+    .meta-table {
+      width: 100%;
+      display: flex;
+    }
+
     .title {
       @include span (3);
       margin-left: 0;
@@ -83,6 +97,11 @@
       margin-left: 0;
       background-color: $concrete;
       border-radius: 0px 4px 4px 0px;
+
+      hr {
+        border-top: 1px solid $tundora;
+        opacity: .7;
+      }
     }
 
     .title, .desc {

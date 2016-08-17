@@ -36,6 +36,17 @@ add_action( 'wp_enqueue_scripts', 'single_project_scripts_method' );
   <div class="project-content">
     <h1><?php the_title(); ?></h1>
     <?php the_content(); ?>
+
+    <div class="website">
+      <?php
+        $key = 'website';
+        $themeta = get_post_meta($post->ID, $key, TRUE);
+        if($themeta != '') { ?>
+          <a class="website-button" href="<?php echo(get_post_meta( get_the_ID(), 'website', true ));?>">WEBSITE</a>
+        <?php
+        }
+      ?>
+    </div>
     <?php get_template_part( '/partials/project-meta' ); ?>
 
     <div class="prevpost">

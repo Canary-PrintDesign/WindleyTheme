@@ -27,3 +27,22 @@ button,
     }
   }
 }
+
+.details-button-container {
+  position: absolute;
+  bottom: 0;
+}
+
+a.details-button, a.website-button {
+  font-family: $font-heading;
+  font-weight: 900;
+  font-size: 14px;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 6px;
+  margin-right: 15px;
+}
+
+a.details-button:hover {
+  color: $tundora;
+}
