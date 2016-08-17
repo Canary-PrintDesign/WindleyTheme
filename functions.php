@@ -7,6 +7,7 @@ require get_template_directory() . '/includes/_enqueue_scripts.php';
 require get_template_directory() . '/includes/slug-in-classname/slug-in-classname.php';
 require get_template_directory() . '/includes/custom-post-type/custom-post-type.php';
 require get_template_directory() . '/includes/remove-emoji/remove-emoji.php';
+require get_template_directory() . '/includes/sales-excerpt/sales.php';
 
 // Short Excerpt code for limiting characters on projects page
 function get_the_short_excerpt(){
