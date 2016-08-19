@@ -29,31 +29,26 @@
   }
 
   .bgfeaturebox {
-    @include span (12);
     text-align: right;
-    padding-top: 60px;
+    font-size: 0.75rem;
 
-      p {
-        margin: 0;
-      }
-
-    .bgfeature {
-      font-family: $font-heading;
-      font-size:.75em;
-      font-weight: 700;
-      text-decoration: underline;
-      text-transform: uppercase;
-      color: #ffffff;
+    &-wrapper {
+      @include span (12);
+      height: 65vh;
+      margin-top: 2rem;
     }
 
-    .bgfeaturelocation {
-      font-family: $font-body;
-      font-size:.75em;
-      color: #ffffff;
+    h4 {
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: underline;
     }
   }
+
   .splashtext {
-    margin-top: 53vh; /* Kevin - Requires proper fix for dropping content */
     width:100%;
     display: inline-block;
     text-align: center;
