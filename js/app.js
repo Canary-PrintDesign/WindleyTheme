@@ -30,4 +30,12 @@ jQuery(function($) {
   $(document.body).on('click', '.menu-item-has-children > a', toggleSubNav);
   $(document.body).on('click', closeOnClickOutside);
   $(document.body).on('click', '[data-toggle]', toggleActive);
+
+
+  if($("#js-sticky-heading").length) {
+    $("#js-sticky-heading").stick_in_parent({
+      offset_top: $("#js-sticky-heading").offset().top,
+      spacer: false
+    });
+  }
 });

@@ -10,7 +10,7 @@
 <div class="background-image" style="background-image: url(<?php echo $src; ?>);"></div>
 <div class="container">
     <div class="bgfeaturebox-wrapper">
-        <div class="bgfeaturebox">
+        <div class="bgfeaturebox" id="js-sticky-heading">
             <h4>
               <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h4>
