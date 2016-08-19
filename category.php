@@ -1,5 +1,5 @@
 <?php get_template_part( '/partials/header' ); ?>
-<?php get_template_part( '/partials/hero' ); ?>
+<?php include(locate_template('/partials/hero.php')); ?>
 
 <div class="category-banner">
     <div class="category-heading">
