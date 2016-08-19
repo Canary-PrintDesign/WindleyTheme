@@ -9,15 +9,15 @@
 
 <div class="background-image" style="background-image: url(<?php echo $src; ?>);"></div>
 <div class="container">
-    <div class="bgfeaturebox">
-        <p>
-          <a class="bgfeature" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-        </p>
-        <p>
-          <span class="bgfeaturelocation">
-            <?php echo(get_post_meta( get_the_ID(), 'location', true )); ?>
-          </span>
-        </p>
+    <div class="bgfeaturebox-wrapper">
+        <div class="bgfeaturebox">
+            <h4>
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </h4>
+            <div>
+              <?php echo(get_post_meta( get_the_ID(), 'location', true )); ?>
+            </div>
+        </div>
     </div>
     <div class="splashtext">
         <h1>Performance & Strength</h1>
