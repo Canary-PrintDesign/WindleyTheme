@@ -74,7 +74,16 @@ $topnav-logo-width: 303px;
     @include position(absolute, $topnav-height null null 50%);
     height: $topnav-logo-height;
     width: $topnav-logo-width;
-    background: url(../../images/logo.png), url(../../images/logo-small.png) 100% / cover;
+    background: url(../../images/logo.png) 100% / cover;
+
+    &::after {
+      @include size(1px);
+      content: 'preload small logo';
+      display: block;
+      background: url(../../images/logo-small.png);
+      position: absolute;
+      left: -99999px;
+    }
   }
 
   .menu {
