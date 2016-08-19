@@ -89,7 +89,7 @@
     </div>
 
     <div class="leed">
-      <h2>LEED Certification</h2>
+      <h2>LEED Status</h2>
       <h3>Gold</h3>
       <li>
         <a href="#">Uplands Walk</a>
@@ -113,6 +113,10 @@
       <h3>Certified</h3>
       <li>
         <a href="#">Vancouver Island University - Faculty of Management</a>
+      </li>
+      <h3>Registered</h3>
+      <li>
+        <a href="#">Nanaimo City Hall Annex</a>
       </li>
     </div>
 </div>
