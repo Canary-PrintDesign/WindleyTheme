@@ -30,7 +30,8 @@ jQuery(function($) {
     modalGallery.resize();
   };
   var closeModal = function(e) {
-    if(!$(e.target).hasClass('modal')) return;
+    if(!$(e.target).is('.modal, .close')) return;
+    e.preventDefault();
     $(document.body).removeClass('modal-open');
     $('.modal').removeClass('open');
   };
@@ -39,4 +40,5 @@ jQuery(function($) {
   pageGallery.on('staticClick', showModal);
   $('.gallery-navigation').on('click', '.gallery-thumb', pickSlide);
   $(document.body).on('click', '.modal', closeModal);
+  $('.modal .close').on('click', closeModal);
 });

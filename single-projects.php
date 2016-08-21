@@ -70,6 +70,7 @@ add_action( 'wp_enqueue_scripts', 'single_project_scripts_method' );
 
 <div class="modal">
   <?php echo do_shortcode('[nggallery id='. $gallery_id .' template=flickity]') ?>
+  <a href="#" class="close">✕</a>
 </div>
 
 <?php endwhile; else: ?>

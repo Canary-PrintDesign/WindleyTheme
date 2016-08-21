@@ -24,6 +24,21 @@
   &:not(.open) {
     display: none;
   }
+
+  .close {
+    position: absolute;
+    top: $topnav-height;
+    right: 0;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 2rem;
+    color: $white;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 body.modal-open {
