@@ -1,8 +1,15 @@
 jQuery(function($) {
-  $('.gallery-carousel').flickity({
+  $('.project-photos .gallery-carousel').flickity({
     imagesLoaded: true,
     pageDots: false,
     wrapAround: true
+  });
+
+  $('.modal .gallery-carousel').flickity({
+    imagesLoaded: true,
+    pageDots: false,
+    wrapAround: true,
+    setGallerySize: false
   });
 
   var pageGallery = $('.project-photos .gallery-carousel').data('flickity');
@@ -23,7 +30,8 @@ jQuery(function($) {
     modalGallery.resize();
   };
   var closeModal = function(e) {
-    if(!$(e.target).hasClass('modal')) return;
+    if(!$(e.target).is('.modal, .close')) return;
+    e.preventDefault();
     $(document.body).removeClass('modal-open');
     $('.modal').removeClass('open');
   };
@@ -32,4 +40,5 @@ jQuery(function($) {
   pageGallery.on('staticClick', showModal);
   $('.gallery-navigation').on('click', '.gallery-thumb', pickSlide);
   $(document.body).on('click', '.modal', closeModal);
+  $('.modal .close').on('click', closeModal);
 });
