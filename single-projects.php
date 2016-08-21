@@ -1,24 +1,20 @@
 <?php
-
 function single_project_scripts_method() {
   wp_enqueue_script( 'flickity', get_stylesheet_directory_uri() . '/js/flickity.pkgd.min.js' );
-
   wp_enqueue_script( 'product-detail', get_stylesheet_directory_uri() . '/build/js/pages/product-detail.js', array(
     'jquery',
     'flickity'
   ) );
 }
-
 add_action( 'wp_enqueue_scripts', 'single_project_scripts_method' );
-
 ?>
+
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php $gallery_id = (get_post_meta( get_the_ID(), 'gallery-id', true )); ?>
+<div <?php post_class(); ?>>
 
 <?php get_template_part( '/partials/header' ); ?>
 <?php get_template_part( '/partials/hero' ); ?>
-
-<?php  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php $gallery_id = (get_post_meta( get_the_ID(), 'gallery-id', true )); ?>
-<div <?php post_class(); ?>>
 
   <div class="category-banner">
     <div class="category-heading">

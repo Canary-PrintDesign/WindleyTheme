@@ -1,5 +1,4 @@
 .hero {
-  background: url(../../images/hero/placeholder.jpg) 100% / cover;
 
   .container {
     position: relative;
@@ -15,4 +14,49 @@
     bottom: 1rem;
     color: $white;
   }
+}
+
+.category-civil-projects .hero {
+  background: url(../../images/hero/civil.jpg) 100% / cover;
+  background-position: top center;
+}
+
+.category-commercial-projects .hero {
+  background: url(../../images/hero/commercial.jpg) 100% / cover;
+  background-position: top center;
+}
+
+.category-residential-projects .hero {
+  background: url(../../images/hero/residential.jpg) 100% / cover;
+  background-position: bottom center;
+}
+
+.category-sales .hero {
+  background: url(../../images/hero/sales.jpg) 100% / cover;
+  background-position: center;
+}
+
+.page-about .hero {
+  background: url(../../images/hero/about.jpg) 100% / cover;
+  background-position: center;
+}
+
+.page-community .hero {
+  background: url(../../images/hero/community.jpg) 100% / cover;
+  background-position: top center;
+}
+
+.page-awards .hero {
+  background: url(../../images/hero/awards.jpg) 100% / cover;
+  background-position: top center;
+}
+
+.page-contact .hero {
+  background: url(../../images/hero/contact.jpg) 100% / cover;
+  background-position: center left;
+}
+
+.page-careers .hero {
+  background: url(../../images/hero/careers.jpg) 100% / cover;
+  background-position: center;
 }
