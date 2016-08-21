@@ -1,8 +1,15 @@
 jQuery(function($) {
-  $('.gallery-carousel').flickity({
+  $('.project-photos .gallery-carousel').flickity({
     imagesLoaded: true,
     pageDots: false,
     wrapAround: true
+  });
+
+  $('.modal .gallery-carousel').flickity({
+    imagesLoaded: true,
+    pageDots: false,
+    wrapAround: true,
+    setGallerySize: false
   });
 
   var pageGallery = $('.project-photos .gallery-carousel').data('flickity');

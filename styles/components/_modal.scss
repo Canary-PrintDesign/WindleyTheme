@@ -1,20 +1,16 @@
 .modal {
   @include position(fixed, 0);
-  // @include display(flex);
-  // @include justify-content(center);
-  // @include align-items(center);
+  @include display(flex);
+  @include justify-content(center);
+  @include align-items(center);
   padding-top: $topnav-height;
   background: transparentize($black, 0.2);
   cursor: zoom-out;
 
-  .gallery {
-    max-width: 90%;
-    max-height: 90%;
+  .gallery-carousel {
+    width: 90vw;
+    height: 70vh;
     margin: 0 auto;
-
-    &-cell {
-      width: 100%;
-    }
   }
 
   .background-image {
