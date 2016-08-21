@@ -4,11 +4,10 @@
     $alt = $image->alttext == ' ' ? '': htmlspecialchars($image->alttext);
     $meta_full = $image->meta_data['full'];
     echo "
-    <img class='gallery-cell'
-         src='{$image->imageURL}'
-         alt='{$alt}'
-         title='{$alt}'
-    />";
+    <div class='gallery-cell background-image'
+         style='background-image: url({$image->imageURL});'
+         data-title='{$alt}'
+    ></div>";
     endforeach; ?>
   </div>
 </div>
