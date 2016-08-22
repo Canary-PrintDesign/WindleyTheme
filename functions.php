@@ -1,6 +1,6 @@
 <?php
 
-add_theme_support( 'post-thumbnails', array( 'post', 'page' ) ); // Add "featured-image" to pages
+add_theme_support( 'post-thumbnails', array( 'post', 'page', 'projects' ) ); // Add "featured-image" to pages
 
 require get_template_directory() . '/includes/custom-meta/_custom-meta.php';
 require get_template_directory() . '/includes/_enqueue_scripts.php';
