@@ -9,7 +9,7 @@ function my_create_post_meta_box() {
 
 function my_post_meta_box( $object, $box ) { ?>
     <p>
-        <textarea name="sales" id="sales" cols="60" rows="4" tabindex="30" style="width: 97%;"><?php echo wp_specialchars( get_post_meta( $object->ID, 'Sales Excerpt', true ), 1 ); ?></textarea>
+        <textarea name="sales" id="sales" cols="60" rows="4" tabindex="30" style="width: 97%;"><?php echo wp_specialchars( get_post_meta( $object->ID, 'sales', true ), 1 ); ?></textarea>
         <input type="hidden" name="my_meta_box_nonce" value="<?php echo wp_create_nonce( plugin_basename( __FILE__ ) ); ?>" />
     </p>
 <?php }
