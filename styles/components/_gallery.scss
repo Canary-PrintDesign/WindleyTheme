@@ -43,7 +43,6 @@ $gallery-gutter: gutter();
     width: 25% - $gallery-gutter * 3/4;
     margin: $gallery-gutter $gallery-gutter 0 0;
     border-radius: 2px;
-    height: 100% * 2/3;
 
     &:nth-child(4n) {
       margin-right: 0;
