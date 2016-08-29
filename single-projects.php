@@ -44,23 +44,24 @@ add_action( 'wp_enqueue_scripts', 'single_project_scripts_method' );
       ?>
     </div>
     <?php get_template_part( '/partials/project-meta' ); ?>
-
-    <div class="prevpost">
-      <?php $next_post = get_adjacent_post( true, '', false ); ?>
-      <?php if ( is_a( $next_post, 'WP_Post' ) ) {  ?>
-      <a href="<?php echo get_permalink( $next_post->ID ); ?>">
-        <i class="fa fa-angle-left"></i> <?php echo get_the_title( $next_post->ID ); ?>
-      </a>
-      <?php } ?>
-    </div>
-    <div class="nextpost">
-      <?php $previous_post = get_adjacent_post( true, '', true ); ?>
-      <?php if ( is_a( $previous_post, 'WP_Post' ) ) {  ?>
-      <a href="<?php echo get_permalink( $previous_post->ID ); ?>">
-        <?php echo get_the_title( $previous_post->ID ); ?> <i class="fa fa-angle-right"></i>
-      </a>
-      <?php } ?>
-    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="prevpost">
+    <?php $next_post = get_adjacent_post( true, '', false ); ?>
+    <?php if ( is_a( $next_post, 'WP_Post' ) ) {  ?>
+    <a href="<?php echo get_permalink( $next_post->ID ); ?>">
+      <i class="fa fa-angle-left"></i> Previous Project
+    </a>
+    <?php } ?>
+  </div>
+  <div class="nextpost">
+    <?php $previous_post = get_adjacent_post( true, '', true ); ?>
+    <?php if ( is_a( $previous_post, 'WP_Post' ) ) {  ?>
+    <a href="<?php echo get_permalink( $previous_post->ID ); ?>">
+      Next Project <i class="fa fa-angle-right"></i>
+    </a>
+    <?php } ?>
   </div>
 </div>
 
