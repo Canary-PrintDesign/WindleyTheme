@@ -21,14 +21,14 @@
     new Link('<img src="../wp-content/themes/windley/images/community/6.png">', 'https://makeawishbc.ca/'),
     new Link('<img src="../wp-content/themes/windley/images/community/7.png">', 'http://hockeynanaimo.com/'),
     new Link('<img src="../wp-content/themes/windley/images/community/8.png">', 'http://www.nanaimosquashclub.com/'),
-    new Link('<img src="../wp-content/themes/windley/images/community/9.png">', 'http://www.tmen.ca/'),
+    new Link('<img src="../wp-content/themes/windley/images/community/9.png">', 'http://www.tourderock.ca/'),
     new Link('<img src="../wp-content/themes/windley/images/community/10.png">', 'http://www.nanaimo.ca/schedules/parks-recreation-culture/'),
     new Link('<img src="../wp-content/themes/windley/images/community/11.png">', 'https://www2.viu.ca/apprenticeship/index.asp'),
     new Link('<img src="../wp-content/themes/windley/images/community/12.png">', 'http://www.ypnanaimo.com/'),
   );
 ?>
 
-<div class="community-page2">
+<div class="community-page">
 
   <div class="container">
     <div class="content">
