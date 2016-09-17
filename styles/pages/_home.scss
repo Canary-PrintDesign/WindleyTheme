@@ -67,6 +67,7 @@
       0px -1px 0 $brand-primary-low,
       1px 0px 0 $brand-primary-low,
       0px 1px 0 $brand-primary-low;
+    line-height: 1em;
 
   }
 
@@ -129,7 +130,7 @@
 
   @media (max-width: 700px) {
     .hb1, .hb2, .hb3 {
-      @include span (100%);
+      @include span (12);
       margin-top: 25px;
       border-top: 4px solid #ffffff;
     }
