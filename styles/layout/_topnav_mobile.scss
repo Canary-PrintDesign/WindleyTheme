@@ -7,6 +7,7 @@
 .topnav-mobile {
   @include position(fixed, 0 0 null);
   z-index: 999;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.15);
 
   .navbar {
     position: relative;
