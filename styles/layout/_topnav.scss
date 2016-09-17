@@ -12,7 +12,7 @@ $topnav-logo-width: 303px;
 .topnav-spacer {
   height: $topnav-height;
 
-  @media (max-width: 1085px) {
+  @media (max-width: 750px) {
     height: 73px;
   }
 }
@@ -42,6 +42,7 @@ $topnav-logo-width: 303px;
         height: $topnav-menu-height;
         display: block;
         text-align: center;
+        white-space: nowrap;
       }
     }
   }
@@ -67,6 +68,10 @@ $topnav-logo-width: 303px;
     top: -1px;
     height: 1px;
     @include span (4);
+
+    @media (max-width: 1085px) {
+      @include span (4);
+    }
   }
 
   .nav-logo {
@@ -75,6 +80,11 @@ $topnav-logo-width: 303px;
     height: $topnav-logo-height;
     width: $topnav-logo-width;
     background: url(../../images/logo.png) 100% / cover;
+
+    @media (max-width: 1085px) {
+      background: url(../../images/logo-small.png) no-repeat;
+      background-position: center;
+    }
 
     &::after {
       @include size(1px);
@@ -149,7 +159,7 @@ $topnav-logo-width: 303px;
   }
 }
 
-@media (max-width: 1085px) {
+@media (max-width: 750px) {
   .topnav {
     display: none;
   }
