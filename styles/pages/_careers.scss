@@ -29,5 +29,34 @@
     margin-top: 2em;
     margin-bottom: 2em;
     color: $white;
+
+    div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
+    div.wpforms-container-full .wpforms-form select.wpforms-field-medium,
+    div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 999px) {
+  .page-careers {
+    .contact-form {
+      @include span (8);
+    }
+  }
+}
+
+
+@media (max-width: 599px) {
+  .page-careers {
+    .contact-form {
+      @include span (12);
+    }
+    .content {
+      @include span (12);
+    }
+    .careers-photo {
+      @include span (12);
+    }
   }
 }
