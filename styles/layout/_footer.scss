@@ -126,7 +126,7 @@
     }
   }
 
-  @media (min-width: 451px) and (max-width: 699px) {
+  @media (min-width: 451px) and (max-width: 704px) {
     padding: $body-padding-mobile;
 
     .contact-info {
@@ -138,7 +138,7 @@
     }
   }
 
-  @media (min-width: 700px) {
+  @media (min-width: 705px) {
     .contact-info,
     .site-map {
       @include span(4);
@@ -151,16 +151,12 @@
     }
   }
 
-  @media (min-width: 700px) and (max-width: 999px) {
+  @media (min-width: 705px) and (max-width: 900px) {
     .contact-info, .site-map {
-      @include span(4);
+      @include span(5);
     }
-  }
-
-  @media (min-width: 1000px) {
-    .contact-info,
-    .site-map {
-      @include span(4);
+    .footer-menu-left {
+      display: none;
     }
   }
 }
