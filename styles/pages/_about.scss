@@ -36,3 +36,24 @@
   }
 }
 
+@media (min-width: 600px) and (max-width: 999px) {
+  .about-page {
+    .content{
+      @include span (6);
+    }
+    .about-photo {
+      @include span (6);
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .about-page {
+    .content{
+      @include span (12);
+    }
+    .about-photo {
+      @include span (12);
+    }
+  }
+}
