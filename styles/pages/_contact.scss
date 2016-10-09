@@ -61,9 +61,17 @@
       @include span (6);
     }
   }
+}
 
-
-
-
-
+@media (max-width: 700px) {
+  .page-contact {
+    .main-content {
+      .page-content {
+        @include span (12);
+      }
+      .contact-form {
+        @include span (12);
+      }
+    }
+  }
 }
