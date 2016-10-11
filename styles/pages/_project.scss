@@ -1,10 +1,3 @@
-@media (min-width: $container-width) {
-  .project-photos,
-  .project-content {
-    @include span(6);
-  }
-}
-
 .project-photos {
   padding-bottom: 50px;
 
@@ -27,16 +20,16 @@
   }
 }
 
-.single {
-  .category-banner {
-    .category-heading {
-      line-height: 50px;
-      a {
-        height: 50px;
-      }
-    }
-  }
-}
+// .single {
+//   .category-banner {
+//     .category-heading {
+//       line-height: 50px;
+//       a {
+//         height: 50px;
+//       }
+//     }
+//   }
+// }
 
 .single {
   .category-civil-projects {
@@ -146,4 +139,83 @@
 .prevpost a:hover, .nextpost a:hover,.prevpost a:focus, .nextpost a:focus{
   text-decoration:none;
   color: $regal-blue;
+}
+
+@media (min-width: 1000px) {
+  .project-photos,
+  .project-content {
+    @include span(6);
+  }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+  .project-photos {
+    @include span (7);
+  }
+  .project-content {
+    @include span(5);
+  }
+}
+
+@media (min-width: 500px) and (max-width: 750px) {
+  .project-photos {
+    @include span (12);
+  }
+  .project-content {
+    @include span(12);
+  }
+}
+
+@media (min-width: 100px) and (max-width: 499px) {
+  .single {
+    .project-photos {
+      padding-bottom: 0;
+      .gallery {
+        .gallery-navigation {
+          display: none;
+        }
+      }
+    }
+    .project-content {
+      @include span (12);
+
+      .meta-table {
+        display: block;
+      }
+
+      .title {
+        @include span (12);
+      }
+
+      .desc {
+        @include span (12);
+        margin-top: -15px;
+      }
+
+      .title, .desc {
+        padding-left: 0;
+        padding-right: 0;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+// Next and Previous buttons
+@media (min-width: 500px) {
+  .prevpost-mobile {
+    display: none;
+  }
+  .nextpost-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 501px) {
+  .prevpost-full {
+    display: none;
+  }
+  .nextpost-full {
+    display: none;
+  }
 }
