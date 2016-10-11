@@ -29,8 +29,10 @@
 ?>
 
 <div class="community-page">
-
   <div class="container">
+    <div class="heading">
+      <h1><?php wp_title($sep=null) ?></h1>
+    </div>
     <div class="content">
       <?php the_post(); ?>
       <?php the_content();?>

@@ -13,15 +13,12 @@
   }
 
   .content {
-    margin-bottom: $footer-top-margin / 2;
-    margin-top: $footer-top-margin / 2;
+    margin-bottom: $footer-top-margin ;
   }
 
   .community-photo {
     @include span (4);
     float: right;
-    margin-bottom: $footer-top-margin / 2;
-    margin-top: $footer-top-margin / 2;
 
     img {
       min-height: 100%;
