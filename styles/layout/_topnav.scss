@@ -26,13 +26,13 @@ $topnav-logo-width: 303px;
 
   .container {
     position: relative;
-    height: $topnav-height;
+    height: 91px;
   }
 
   .topnav-left-container,
   .topnav-right-container {
     position: relative;
-    bottom: -35px;
+    bottom: -43px;
 
     > ul > li {
       @include span(2);
