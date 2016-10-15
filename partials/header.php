@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="theme-color" content="#B5A36A">
+<meta name="theme-color" content="#B5A36A" />
 <meta name="msapplication-navbutton-color" content="#B5A36A" />
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <title><?php bloginfo( 'name' ); ?></title>
