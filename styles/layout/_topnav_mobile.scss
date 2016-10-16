@@ -102,4 +102,36 @@
   &:not(.active) .dropdown {
     display: none;
   }
+
+  .menu-item:not(.active) .sub-menu {
+    display: none;
+  }
+
+  .menu-item-has-children {
+    position: relative;
+
+    > a::after {
+      position: relative;
+      top: 1px;
+      float: right;
+      margin-left: 1rem;
+      font-family: FontAwesome;
+      content: "#{$fa-var-angle-down}";
+    }
+
+    &.active > a::after {
+      content: "#{$fa-var-angle-up}";
+    }
+  }
+
+  .sub-menu {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+
+    li {
+      background: shade($topnav-mobile-nav-bg, 20%);
+      text-indent: 2em;
+    }
+  }
 }
