@@ -56,6 +56,10 @@ function menu_name($location){
   echo $footer_nav_1->name;
 }
 
-
+function get_category_url($category_slug) {
+  $category_id = get_category_by_slug($category_slug)->term_id;
+  $category_link = get_category_link( $category_id );
+  return esc_url( $category_link );
+}
 
 ?>

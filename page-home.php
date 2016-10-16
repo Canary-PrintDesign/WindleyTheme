@@ -31,7 +31,7 @@
         <div class="herobox hb1">
             <h1>Currently <br>Selling</h1>
             <p>We are a widely diverse development and general contracting company based on Vancouver Island and serving all of BC and Alberta in the civil, commercial, and residential sectors. </p>
-            <a href="./sales" class="herobutton">LEARN MORE</a>
+            <a href="<?php echo get_category_url('sales'); ?>" class="herobutton">LEARN MORE</a>
         </div>
         <div class="herobox hb2">
             <h1>Community <br>Involvement</h1>
