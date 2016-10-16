@@ -4,8 +4,13 @@
     margin-bottom: $footer-top-margin;
     color: $body-color;
 
+    .container {
+      @include display(flex);
+      @include flex-wrap(wrap);
+    }
+
     .two-column-post {
-      @include span (6);
+      @include flex-basis(50%);
       height: auto;
       margin-bottom: 60px;
       position: relative;
