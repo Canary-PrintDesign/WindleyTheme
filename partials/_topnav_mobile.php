@@ -7,8 +7,8 @@
   </div>
 
   <div class="dropdown">
-    <?php wp_nav_menu ( array( 'theme_location' => 'topnav-left', 'container_class' => 'topnav-left-container', 'depth' => 1) ); ?>
-    <?php wp_nav_menu ( array( 'theme_location' => 'topnav-right', 'container_class' => 'topnav-right-container', 'depth' => 1) ); ?>
+    <?php wp_nav_menu ( array( 'theme_location' => 'topnav-left', 'container_class' => 'topnav-left-container') ); ?>
+    <?php wp_nav_menu ( array( 'theme_location' => 'topnav-right', 'container_class' => 'topnav-right-container') ); ?>
 
     <div class="social-links">
       <h4><a href="<?php bloginfo('home'); ?>/careers">Careers</a></h4>
