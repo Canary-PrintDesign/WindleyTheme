@@ -36,12 +36,12 @@
         <div class="herobox hb2">
             <h1>Community <br>Involvement</h1>
             <p>We are humbled to have had the opportunity to work with so many local charities, organizations,  and events throughout Nanaimo and the surrounding area.</p>
-            <a href="./community" class="herobutton">LEARN MORE</a>
+            <a href="<?php echo get_page_link(30); ?>" class="herobutton">LEARN MORE</a>
         </div>
         <div class="herobox hb3">
             <h1>Industry <br>Recognition</h1>
             <p>Windley has had the privilege of working on some incredible projects with great clients.  Check out some of the awards we've had the honor of being involved with.</p>
-            <a href="./awards" class="herobutton">LEARN MORE</a>
+            <a href="<?php echo get_page_link(32); ?>" class="herobutton">LEARN MORE</a>
         </div>
     </div>
 </div>
