@@ -3,8 +3,8 @@
   $themeta = get_post_meta($post->ID, $key, TRUE);
   if($themeta != '') { ?>
     <div class="meta-table">
-      <span class="title"> &nbsp Client:</span>
-      <span class="desc"> &nbsp <?php echo(get_post_meta( get_the_ID(), 'client-name', true ));?></span>
+      <span class="title">Client:</span>
+      <span class="desc"><?php echo(get_post_meta( get_the_ID(), 'client-name', true ));?></span>
     </div>
   <?php
   }
@@ -15,8 +15,8 @@
   $themeta = get_post_meta($post->ID, $key, TRUE);
   if($themeta != '') { ?>
     <div class="meta-table">
-      <span class="title"> &nbsp Location:</span>
-      <span class="desc"> &nbsp <?php echo(get_post_meta( get_the_ID(), 'location', true ));?></span>
+      <span class="title">Location:</span>
+      <span class="desc"><?php echo(get_post_meta( get_the_ID(), 'location', true ));?></span>
     </div>
   <?php
   }
@@ -27,8 +27,8 @@
   $themeta = get_post_meta($post->ID, $key, TRUE);
   if($themeta != '') { ?>
     <div class="meta-table">
-      <span class="title"> &nbsp Size:</span>
-      <span class="desc"> &nbsp <?php echo(get_post_meta( get_the_ID(), 'size', true ));?></span>
+      <span class="title">Size:</span>
+      <span class="desc"><?php echo(get_post_meta( get_the_ID(), 'size', true ));?></span>
     </div>
   <?php
   }
@@ -39,9 +39,9 @@
   $themeta = get_post_meta($post->ID, $key, TRUE);
   if($themeta != '') { ?>
     <div class="meta-table">
-      <span class="title"> &nbsp Consultant:</span>
+      <span class="title">Consultant:</span>
       <span class="desc">
-         &nbsp <?php echo(get_post_meta( get_the_ID(), 'consultant1', true ));?>
+         <?php echo(get_post_meta( get_the_ID(), 'consultant1', true ));?>
 
         <?php
           $key = 'consultant2';

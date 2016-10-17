@@ -20,17 +20,6 @@
   }
 }
 
-// .single {
-//   .category-banner {
-//     .category-heading {
-//       line-height: 50px;
-//       a {
-//         height: 50px;
-//       }
-//     }
-//   }
-// }
-
 .single {
   .category-civil-projects {
     li.civil-nav, {
@@ -149,11 +138,34 @@
 }
 
 @media (min-width: 751px) and (max-width: 999px) {
-  .project-photos {
-    @include span (7);
-  }
-  .project-content {
-    @include span(5);
+  .single {
+
+    .project-photos {
+      @include span (7);
+    }
+
+    .project-content {
+      @include span(5);
+
+      .meta-table {
+        display: block;
+      }
+
+      .title {
+        @include span (12);
+      }
+
+      .desc {
+        @include span (12);
+        margin-top: -15px;
+      }
+
+      .title, .desc {
+        padding-left: 0;
+        padding-right: 0;
+        border-radius: 0;
+      }
+    }
   }
 }
 
