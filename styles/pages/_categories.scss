@@ -75,7 +75,8 @@
   .project-listing {
     .media {
       img {
-        width: 100%;
+        @include span (12);
+        padding-right: 0;
       }
     }
 
