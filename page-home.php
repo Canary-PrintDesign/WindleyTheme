@@ -30,7 +30,7 @@
     <div class="heroboxes">
         <div class="herobox hb1">
             <h1>Currently <br>Selling</h1>
-            <p>We are a widely diverse development and general contracting company based on Vancouver Island and serving all of BC and Alberta in the civil, commercial, and residential sectors. </p>
+            <p>From well-planned out, high quality multi-family developments to custom homes to modern commercial space, Windley Contracting has residential and commercial space to suite your needs. </p>
             <a href="<?php echo get_category_url('sales'); ?>" class="herobutton">LEARN MORE</a>
         </div>
         <div class="herobox hb2">
