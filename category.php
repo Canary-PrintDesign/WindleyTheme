@@ -1,5 +1,12 @@
+<?php
+$category = get_queried_object();
+if (function_exists('wp_get_terms_meta')) {
+  $hero_bg_src = wp_get_terms_meta($category->term_id, 'featured-image' ,true);
+}
+?>
+
 <?php get_template_part( '/partials/header' ); ?>
-<?php get_template_part( '/partials/hero' ); ?>
+<?php include(locate_template('/partials/hero.php')); ?>
 
 <div class="category-banner">
     <div class="category-heading">
